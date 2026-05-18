@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel | Abdelmounim Ahmed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            light: '#ddd6fe',  /* Violet très doux */
+                            primary: '#8b5cf6', /* Violet principal (Améthyste) */
+                            dark: '#6d28d9',    /* Violet intense */
+                        },
+                        cream: {
+                            bg: '#faf9f6',      /* Blanc crème / Coquille d'œuf */
+                            card: '#ffffff',    /* Blanc pur pour les cartes */
+                            border: '#e5e0d8'   /* Bordures douces */
+                        },
+                        text: {
+                            main: '#1f2937',    /* Gris très foncé pour le texte principal */
+                            muted: '#4b5563'    /* Gris moyen pour les paragraphes */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-view { transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; }
+        .hover-shadow:hover { box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.15); transform: translateY(-3px); }
+    </style>
+</head>
+<body class="bg-cream-bg text-text-main font-sans antialiased selection:bg-brand-primary selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-cream-bg/90 backdrop-blur-md border-b border-cream-border shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div onclick="navigateTo('page-accueil')" class="flex-shrink-0 font-bold text-2xl tracking-wider text-text-main cursor-pointer group">
+                    <span class="text-brand-primary group-hover:text-brand-dark transition-colors">P</span>ortfolio<span class="text-brand-primary">.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <button onclick="navigateTo('page-accueil')" class="nav-link text-brand-primary font-semibold px-3 py-2 text-sm transition-colors">Accueil</button>
+                        <button onclick="navigateTo('page-profil')" class="nav-link text-text-muted hover:text-brand-primary font-medium px-3 py-2 text-sm transition-colors">Profil & CV</button>
+                        <button onclick="navigateTo('page-sae-liste')" class="nav-link text-text-muted hover:text-brand-primary font-medium px-3 py-2 text-sm transition-colors">Projets SAÉ</button>
+                        <button onclick="navigateTo('page-bilan')" class="nav-link text-text-muted hover:text-brand-primary font-medium px-3 py-2 text-sm transition-colors">Bilan S1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <div id="page-accueil" class="page-view min-h-[calc(100vh-5rem)] flex items-center justify-center px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs uppercase tracking-widest px-4 py-1.5 rounded-full font-bold shadow-sm">Portfolio Universitaire</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-text-main mt-6 mb-6 tracking-tight leading-tight">
+                    Étudiant en <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-dark">BUT Réseaux & Télécoms</span>
+                </h1>
+                <p class="text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Je m'appelle Abdelmounim Ahmed, j'ai 19 ans. Bienvenue sur mon espace de démonstration technique et de démarche réflexive.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <button onclick="navigateTo('page-sae-liste')" class="w-full sm:w-auto bg-brand-primary hover:bg-brand-dark text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-brand-primary/30 hover:-translate-y-0.5">
+                        Explorer mes SAÉ <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                    <button onclick="navigateTo('page-profil')" class="w-full sm:w-auto bg-white border border-cream-border hover:border-brand-primary text-text-main font-medium py-4 px-8 rounded-xl transition-all shadow-sm">
+                        En savoir plus sur moi
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-profil" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-8">
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 text-center h-fit shadow-sm">
+                    
+                    <div class="w-36 h-36 bg-cream-bg rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-brand-light overflow-hidden shadow-inner">
+                        <img src="chemin-vers-ta-photo.jpg" alt="Abdelmounim Ahmed" class="w-full h-full object-cover" onerror="this.outerHTML='<i class=\'fa-solid fa-user-tie text-5xl text-brand-primary\'></i>'">
+                    </div>
+                    
+                    <h2 class="text-2xl font-bold text-text-main">Abdelmounim Ahmed</h2>
+                    <p class="text-brand-primary text-sm font-bold mt-1 uppercase tracking-wide">Étudiant en BUT R&T (1A)</p>
+                    <p class="text-text-muted text-xs mt-2"><i class="fa-solid fa-location-dot mr-1 text-brand-primary"></i> IUT Grand Ouest Normandie, Ifs</p>
+                    
+                    <div class="mt-8 pt-8 border-t border-cream-border text-left space-y-4">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-primary w-5 text-lg"></i><span class="text-sm text-text-muted font-medium break-all">ahmedabdelmounim10@gmail.com</span></div>
+                        <div class="flex items-center gap-3"><i class="fa-brands fa-linkedin text-brand-primary w-5 text-lg"></i><span class="text-sm text-text-muted font-medium">linkedin.com/in/abdelmounim</span></div>
+                    </div>
+                    
+                    <button class="w-full mt-8 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-3 px-4 rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV (PDF)
+                    </button>
+                </div>
+
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm">
+                        <h3 class="text-2xl font-bold text-text-main mb-4">Présentation Générale</h3>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Actuellement âgé de 19 ans, je me suis orienté vers le BUT Réseaux et Télécommunications par passion pour l'architecture des infrastructures modernes et la connectivité. Cette première année m'a permis d'acquérir de solides bases théoriques et surtout pratiques à travers de nombreuses Situations d'Apprentissage et d'Évaluation (SAÉ).
+                        </p>
+                        <p class="text-text-muted leading-relaxed">
+                            J'apprécie énormément la rigueur exigée par les métiers des réseaux et des télécoms. Au-delà de la technique, mon expérience professionnelle passée dans la vente m'a forgé un fort sens des responsabilités, une capacité d'écoute et une grande adaptabilité face à différents interlocuteurs. Je suis quelqu'un de ponctuel, rigoureux, et déterminé à comprendre le cheminement physique et applicatif des données.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
+                            <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-server mr-2"></i>Savoirs Techniques</h4>
+                            <ul class="space-y-3 text-sm text-text-muted">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Maîtrise du modèle OSI et TCP/IP</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Câblage et configuration IP (CLI)</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Programmation de bases en Python</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Intégration Web (HTML/CSS)</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Anglais technique appliqué aux réseaux</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
+                            <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-users mr-2"></i>Savoir-être (Soft Skills)</h4>
+                            <ul class="space-y-3 text-sm text-text-muted">
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Travail en équipe et coordination</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Curiosité technique et esprit logique</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Rigueur globale et ponctualité</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Sens de l'écoute et bon relationnel</li>
+                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Adaptabilité face aux imprévus</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm">
+                        <h3 class="text-2xl font-bold text-text-main mb-4">Mon Projet Professionnel</h3>
+                        <div class="flex items-start gap-5 bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                            <div class="bg-white p-3 rounded-full shadow-sm">
+                                <i class="fa-solid fa-graduation-cap text-2xl text-brand-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-text-main font-bold text-lg">Objectif : École d'Ingénieurs</h4>
+                                <p class="text-text-muted text-sm mt-2 leading-relaxed">
+                                    Mon projet d'avenir à la suite de mon cursus à l'IUT est d'intégrer une <strong>école d'ingénieurs</strong> spécialisée dans les réseaux ou les télécommunications. Je souhaite transformer mes connaissances universitaires en véritable savoir-faire de terrain, développer une expertise technique de pointe tout en me préparant à la gestion de grands projets d'infrastructure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-liste" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold text-text-main">Mes Réalisations (SAÉ)</h2>
+                <p class="text-text-muted mt-3">Découvrez un avant-goût de mes travaux du Semestre 1. Cliquez sur "Voir la page dédiée" pour analyser en détail ma démarche technique et réflexive.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-6 flex flex-col justify-between hover-shadow transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-light/40 rounded-xl flex items-center justify-center text-brand-dark mb-5 text-2xl shadow-inner"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3 class="text-xl font-bold text-text-main">SAÉ 1.01</h3>
+                        <p class="text-brand-primary text-xs font-bold uppercase tracking-wider mt-1 mb-4">Hygiène Info & Cyber</p>
+                        <p class="text-text-muted text-sm leading-relaxed line-clamp-3">Sensibilisation aux risques, validation du MOOC ANSSI et expérimentations sur la sécurité et la force brute des mots de passe utilisateurs.</p>
+                    </div>
+                    <button onclick="navigateTo('page-sae-101')" class="mt-6 w-full bg-brand-light/30 hover:bg-brand-primary hover:text-white text-brand-dark text-sm font-bold py-3 px-4 rounded-xl transition-all">Voir la page dédiée</button>
+                </div>
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-6 flex flex-col justify-between hover-shadow transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-light/40 rounded-xl flex items-center justify-center text-brand-dark mb-5 text-2xl shadow-inner"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3 class="text-xl font-bold text-text-main">SAÉ 1.02</h3>
+                        <p class="text-brand-primary text-xs font-bold uppercase tracking-wider mt-1 mb-4">S'initier aux réseaux</p>
+                        <p class="text-text-muted text-sm leading-relaxed line-clamp-3">Déploiement complet d'une infrastructure d'entreprise (Fibre&Company) avec routage, VLANs, commutateurs physiques et virtualisation Proxmox.</p>
+                    </div>
+                    <button onclick="navigateTo('page-sae-102')" class="mt-6 w-full bg-brand-light/30 hover:bg-brand-primary hover:text-white text-brand-dark text-sm font-bold py-3 px-4 rounded-xl transition-all">Voir la page dédiée</button>
+                </div>
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-6 flex flex-col justify-between hover-shadow transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-light/40 rounded-xl flex items-center justify-center text-brand-dark mb-5 text-2xl shadow-inner"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="text-xl font-bold text-text-main">SAÉ 1.03</h3>
+                        <p class="text-brand-primary text-xs font-bold uppercase tracking-wider mt-1 mb-4">Dispositifs de transmission</p>
+                        <p class="text-text-muted text-sm leading-relaxed line-clamp-3">Étude et mesures physiques des supports cuivre (réflectométrie DTF) et de la fibre optique (photométrie et bilans de liaisons).</p>
+                    </div>
+                    <button onclick="navigateTo('page-sae-103')" class="mt-6 w-full bg-brand-light/30 hover:bg-brand-primary hover:text-white text-brand-dark text-sm font-bold py-3 px-4 rounded-xl transition-all">Voir la page dédiée</button>
+                </div>
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-6 flex flex-col justify-between hover-shadow transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-light/40 rounded-xl flex items-center justify-center text-brand-dark mb-5 text-2xl shadow-inner"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="text-xl font-bold text-text-main">SAÉ 1.04</h3>
+                        <p class="text-brand-primary text-xs font-bold uppercase tracking-wider mt-1 mb-4">Se présenter sur Internet</p>
+                        <p class="text-text-muted text-sm leading-relaxed line-clamp-3">Conception en autonomie d'un site web responsive dédié au FC Barcelone en validant les exigences strictes W3C et WCAG.</p>
+                    </div>
+                    <button onclick="navigateTo('page-sae-104')" class="mt-6 w-full bg-brand-light/30 hover:bg-brand-primary hover:text-white text-brand-dark text-sm font-bold py-3 px-4 rounded-xl transition-all">Voir la page dédiée</button>
+                </div>
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-6 flex flex-col justify-between hover-shadow transition-all">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-light/40 rounded-xl flex items-center justify-center text-brand-dark mb-5 text-2xl shadow-inner"><i class="fa-brands fa-python"></i></div>
+                        <h3 class="text-xl font-bold text-text-main">SAÉ 1.05</h3>
+                        <p class="text-brand-primary text-xs font-bold uppercase tracking-wider mt-1 mb-4">Traitement des données</p>
+                        <p class="text-text-muted text-sm leading-relaxed line-clamp-3">Création d'un script d'extraction Python exploitant l'API REST OpenStreetMap pour automatiser la mise en forme de données géographiques.</p>
+                    </div>
+                    <button onclick="navigateTo('page-sae-105')" class="mt-6 w-full bg-brand-light/30 hover:bg-brand-primary hover:text-white text-brand-dark text-sm font-bold py-3 px-4 rounded-xl transition-all">Voir la page dédiée</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-101" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
+            <div class="space-y-8">
+                <div class="border-b border-cream-border pb-6">
+                    <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.01</span>
+                    <h2 class="text-4xl font-bold text-text-main mt-4">Sensibilisation à l'hygiène informatique et à la cybersécurité</h2>
+                </div>
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte & Objectifs</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Le but premier de ce projet était de nous éveiller aux enjeux cruciaux de la cybersécurité et de la protection des données personnelles. En individuel, nous avons suivi et validé l'auto-formation complète du <strong>MOOC de l'ANSSI</strong>. En groupe, nous devions mener un travail d'expérimentation cyber et présenter nos résultats lors d'un oral de synthèse devant les enseignants.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Tâches effectuées & Outils utilisés</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Mon groupe a travaillé spécifiquement sur le <strong>Lot A : Mots de passe utilisateurs</strong>. Nous avons mené plusieurs actions concrètes :
+                        </p>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
+                            <li>Recherche sur les bonnes pratiques de complexité et de renouvellement des mots de passe d'après les préconisations ANSSI.</li>
+                            <li>Simulation d'une attaque par dictionnaire et force brute sur un environnement Linux Debian via l'outil <strong>Hydra</strong> dans le cadre du TP pratique "Jean Boomer".</li>
+                            <li>Génération d'une liste de mots de passe ciblés à l'aide de l'outil de profilage <strong>CUPP</strong> (Common User Password Profiler).</li>
+                            <li>Étude et mise en œuvre de solutions de gestion de mots de passe robustes sur Debian.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Analyse réflexive et Difficultés</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Obstacles rencontrés :</strong> La principale difficulty résidait dans l'organisation initiale de l'équipe : réussir à diviser et répartir les axes de recherche du lot de manière claire, équitable et structurée entre nous.
+                        </p>
+                        <p class="text-text-muted leading-relaxed">
+                            <strong>Apprentissage et Impact :</strong> Ce projet a radicalement changé ma perception de l'usage quotidien d'Internet. J'ai appris à évaluer les risques d'exposition des données personnelles et à durcir drastiquement la création de mes propres identifiants pour limiter au maximum la surface d'attaque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-102" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
+            <div class="space-y-8">
+                <div class="border-b border-cream-border pb-6">
+                    <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.02</span>
+                    <h2 class="text-4xl font-bold text-text-main mt-4">S'initier aux réseaux informatiques</h2>
+                </div>
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte & Objectifs</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Dans le cadre d'un projet de groupe simulant un besoin pour l'entreprise <strong>Fibre&Company</strong>, l'objectif était de concevoir, dimensionner et configurer l'intégralité d'une infrastructure réseau d'entreprise répondant à un cahier des charges rigoureux. Ce projet mobilisait l'Apprentissage Critique de l'UE 1 : Administrer les réseaux (RT1).
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Tâches effectuées & Rôle technique</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Nous avons suivi en amont la formation académique sur <strong>Cisco NetAcad</strong>. Lors de la phase de déploiement de l'infrastructure, j'ai mobilisé mes capacités pratiques de câblage physique et de configuration, notamment :
+                        </p>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
+                            <li>Modéliser et émuler la topologie cible complète à l'aide de l'outil <strong>Cisco Packet Tracer</strong>.</li>
+                            <li>Configurer en ligne de commande (CLI via <strong>Putty</strong>) les équipements d'interconnexion réels : Commutateurs Cisco 2960X et routeurs 2911.</li>
+                            <li>Implémenter le plan d'adressage IP (VLANs d'administration, services et utilisateurs).</li>
+                            <li>Déployer une machine virtuelle sous <strong>Debian 13</strong> via l'hyperviseur <strong>Proxmox</strong> pour héberger et administrer les services réseau critiques (Serveur DHCP, partage de fichiers SMB, serveur Web Apache).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Traces et Livrables</h4>
+                        <p class="text-text-muted text-sm mb-4">Le projet exigeait de fournir des documents rigoureux : Schémas Logiques et Physiques (conçus avec Draw.io), Rapports de tests de bande passante (via Iperf3), notices de configuration et documentations d'architecture.</p>
+                    </div>
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Analyse réflexive et Difficultés</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Obstacles rencontrés :</strong> Le défi majeur était axé sur la communication d'équipe. À plusieurs sur une même infrastructure, il devenait complexe de suivre l'avancement global et de s'assurer que chacun comprenait exactement la configuration réseau réalisée sur la partie des autres.
+                        </p>
+                        <p class="text-text-muted leading-relaxed">
+                            <strong>Solutions & Acquis :</strong> Pour y remédier, nous avons systématisé la rédaction d'un compte rendu écrit à chaque étape validée. Grâce à cela, j'ai acquis une compétence technique solide en administration réseau d'entreprise (RT1), et j'ai pu démontrer de véritables qualités de travail en équipe et de logique face aux problèmes de l'infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-103" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
+            <div class="space-y-8">
+                <div class="border-b border-cream-border pb-6">
+                    <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.03</span>
+                    <h2 class="text-4xl font-bold text-text-main mt-4">Découvrir un dispositif de transmission</h2>
+                </div>
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte & Objectifs</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Cette SAÉ s'ancre directement dans la compétence "Connecter les usagers et les entreprises" (RT2). L'objectif principal était d'étudier, caractériser et analyser de manière scientifique et expérimentale deux supports physiques majeurs de transmission : les câbles en cuivre (Coaxial RG58, Ethernet RJ45) et la fibre optique monomode.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Tâches effectuées & Contribution personnelle</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            En équipe sur la phase expérimentale en laboratoire de TP, nous devions restituer deux livrables d'analyse. Pour ma part, je me suis pleinement investi dans :
+                        </p>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
+                            <li>La manipulation d'un analyseur de spectre pour effectuer des mesures automatisées de <strong>Distance To Fault (DTF)</strong> et de vitesse de propagation (NVP) sur le cuivre.</li>
+                            <li>La mesure de temps de parcours d'une impulsion à l'aide d'un générateur de fonctions (GBF) et d'un <strong>oscilloscope numérique</strong> pour calculer manuellement la longueur d'un câble ethernet.</li>
+                            <li><strong>Prise en charge intégrale du rapport sur la fibre optique :</strong> Réalisation du calibrage ("Faire le Zéro") et mesures par photométrie de la puissance transmise à une longueur d'onde de 1310 nm sur une liaison L1.</li>
+                            <li>Calcul théorique complet du bilan de liaison optique, aboutissant à une perte théorique de 6,58 dB, confrontée ensuite aux résultats réels du photomètre.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Analyse réflexive et Difficultés</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Obstacles rencontrés :</strong> Nous avons subi une contrainte majeure de temps : notre groupe n'a pu bénéficier que de 30 minutes d'explications sur la fibre contre 2h pour d'autres équipes. Cela a rendu l'observation et la manipulation initiale des supports physiques complexes en début de séance.
+                        </p>
+                        <p class="text-text-muted leading-relaxed">
+                            <strong>Solutions & Acquis :</strong> Faisant preuve de curiosité technique et de détermination (des traits de personnalité que j'essaie de cultiver), j'ai mené un important travail de recherche documentaire en autonomie sur Internet. Cela m'a permis de comprendre précisément le comportement physique interne des ondes lumineuses et de maîtriser pleinement les outils de certification (RT2).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-104" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
+            <div class="space-y-8">
+                <div class="border-b border-cream-border pb-6">
+                    <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.04</span>
+                    <h2 class="text-4xl font-bold text-text-main mt-4">Se présenter sur Internet</h2>
+                </div>
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte & Objectifs</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Cette SAÉ purement individuelle imposait de concevoir et réaliser un site internet de A à Z en s'appuyant sur un cahier des charges rigoureux. L'objectif était de mobiliser les compétences d'intégration web acquises lors de la ressource R109 (Introduction aux technologies Web).
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Réalisation technique</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            J'ai choisi de concevoir un site web complet dédié à l'actualité du club de football du <strong>FC Barcelone</strong>. J'ai développé une interface structurée intégrant le calendrier des matchs, les fiches des joueurs et le classement de l'équipe. Pour ce faire, j'ai codé l'intégralité des fichiers HTML5 et CSS3 en exploitant les layouts modernes (Flexbox et CSS Grid) pour assurer un rendu fluide et adaptatif.
+                        </p>
+                    </div>
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Analyse réflexive et Difficultés</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Obstacles rencontrés :</strong> Le point le plus complexe a été de rendre le code parfaitement conforme aux critères d'accessibilité numérique **WCAG 2.0 AA** et d'obtenir la validation stricte des validateurs officiels du **W3C**. Résoudre les alertes de contrastes et la sémantique HTML a demandé beaucoup d'ajustements et de patience.
+                        </p>
+                        <p class="text-text-muted leading-relaxed">
+                            <strong>Apprentissage et Impact :</strong> Ce projet m'a permis de comprendre l'importance capitale du respect d'un cahier des charges technique industriel. Cela a grandement consolidé mes compétences en programmation web, un atout indispensable pour concevoir des outils d'administration ou des tableaux de bord réseau.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-sae-105" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
+            <div class="space-y-8">
+                <div class="border-b border-cream-border pb-6">
+                    <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.05</span>
+                    <h2 class="text-4xl font-bold text-text-main mt-4">Traitement des données</h2>
+                </div>
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte & Objectifs</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Réalisée en binôme ou en autonomie, cette SAÉ s'inscrit au cœur de la compétence "Programmer des applications informatiques pour les R&T" (RT3). L'objectif principal était de concevoir un outil de programmation complet capable d'interagir avec des services tiers pour centraliser, traiter et mettre en forme des flux de données structurés.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Tâches effectuées & Technologies</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Ce projet a nécessité de mobiliser et croiser nos compétences en algorithmique <strong>Python (Ressource R107)</strong>, en architectures des systèmes (R106) et en technologies du web. Les actions menées :
+                        </p>
+                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
+                            <li>Étude approfondie et requêtage de requêtes HTTP REST vers l'<strong>API OpenStreetMap (OSM)</strong>.</li>
+                            <li>Récupération et parsing/analyse des structures de données complexes renvoyées aux formats <strong>JSON</strong> et <strong>XML</strong>.</li>
+                            <li>Utilisation de la bibliothèque d'imagerie <strong>Pillow</strong> pour manipuler, assembler des tuiles cartographiques et superposer dynamiquement des marqueurs visuels.</li>
+                            <li>Génération automatisée de fiches d'informations structurées au format syntaxique <strong>Markdown</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Analyse réflexive</h4>
+                        <p class="text-text-muted leading-relaxed">
+                            Cette SAÉ a représenté mon premier vrai projet de développement logiciel complet hors des exercices de TP classiques. Elle m'a permis de valider ma capacité à m'interfacer de manière autonome avec une API distante et à traiter de gros volumes de données. C'est un apprentissage clé (RT3) qui me servira grandement pour l'automatisation et les scripts d'administration système à l'avenir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-bilan" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-4xl mx-auto sm:px-6 lg:px-8">
+            <div class="text-center mb-12 mt-8">
+                <h2 class="text-4xl font-bold text-text-main">Bilan du Semestre 1</h2>
+                <p class="text-text-muted mt-2">Synthèse globale et mise en correspondance de mes compétences R&T.</p>
+            </div>
+
+            <div class="bg-cream-card border border-cream-border p-8 rounded-2xl shadow-sm space-y-8">
+                <p class="text-text-muted leading-relaxed">
+                    Ce premier semestre au sein du BUT Réseaux et Télécommunications a posé les fondations techniques indispensables à mon parcours. En analysant mes activités à travers la démarche réflexive, je peux lier mes travaux aux trois compétences fondamentales du diplôme :
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="border-l-4 border-brand-primary pl-5 py-1">
+                        <h4 class="text-brand-dark font-bold text-lg">RT1 – Administrer les réseaux et les systèmes</h4>
+                        <p class="text-text-muted text-sm mt-2 leading-relaxed">
+                            Validé concrètement par les SAÉ 1.01 et 1.02. Je sais désormais concevoir un plan d'adressage IP, configurer des commutateurs et routeurs Cisco physiques, déployer des serveurs virtuels Debian (Proxmox) et y appliquer les règles strictes d'hygiène et de sécurité préconisées par l'ANSSI.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-brand-primary pl-5 py-1">
+                        <h4 class="text-brand-dark font-bold text-lg">RT2 – Connecter les usagers et les entreprises</h4>
+                        <p class="text-text-muted text-sm mt-2 leading-relaxed">
+                            Illustré par la SAÉ 1.03. J'ai acquis la capacité d'analyser scientifiquement la qualité physique des lignes cuivre par réflectométrie (DTF à l'oscilloscope) et de qualifier une infrastructure fibre optique via l'usage de photomètres et de calculs de bilans de liaison théoriques.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-brand-primary pl-5 py-1">
+                        <h4 class="text-brand-dark font-bold text-lg">RT3 – Programmer des outils et des applications</h4>
+                        <p class="text-text-muted text-sm mt-2 leading-relaxed">
+                            Développé lors des SAÉ 1.04 et 1.05. Je maîtrise les bases de la structuration d'interfaces web conformes aux normes (HTML5/CSS3/WCAG) et je suis capable d'architecturer un script de traitement automatisé de données complexes en Python en exploitant des API REST tierces.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-cream-border mt-8">
+                    <h3 class="text-xl font-bold text-text-main mb-3">Prendre du recul sur mon parcours</h3>
+                    <p class="text-text-muted leading-relaxed">
+                        Ma plus forte progression lors de ce semestre réside dans le **travail collaboratif et la communication technique**. La SAÉ 1.02 m'a prouvé que pour réussir une infrastructure complexe, la mise en place de comptes-rendus rigoureux à chaque étape est indispensable pour synchroniser l'équipe. Je ressors de ce premier semestre beaucoup plus autonome, méthodique et particulièrement déterminé à poursuivre mes efforts pour atteindre mon objectif d'école d'ingénieurs en tirant parti de ma rigueur et de mon adaptabilité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-cream-card border-t border-cream-border py-8 mt-12 text-center text-text-muted text-sm">
+        <p>&copy; 2026 Abdelmounim Ahmed - Portfolio Réflexif BUT R&T Ifs.</p>
+    </footer>
+
+    <script>
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-view').forEach(page => {
+                page.classList.add('hidden');
+                page.style.opacity = '0';
+                page.style.transform = 'translateY(10px)';
+            });
+
+            const activePage = document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.remove('hidden');
+                setTimeout(() => {
+                    activePage.style.opacity = '1';
+                    activePage.style.transform = 'translateY(0)';
+                }, 50);
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateNavLinks(pageId);
+        }
+
+        function updateNavLinks(pageId) {
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.classList.remove('text-brand-primary', 'font-semibold');
+                link.classList.add('text-text-muted', 'font-medium');
+            });
+
+            if (pageId === 'page-accueil') links[0].classList.add('text-brand-primary', 'font-semibold');
+            if (pageId === 'page-profil') links[1].classList.add('text-brand-primary', 'font-semibold');
+            if (pageId === 'page-sae-liste' || pageId.startsWith('page-sae-1')) links[2].classList.add('text-brand-primary', 'font-semibold');
+            if (pageId === 'page-bilan') links[3].classList.add('text-brand-primary', 'font-semibold');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            navigateTo('page-accueil');
+        });
+    </script>
+</body>
+</html>
