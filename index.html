@@ -454,37 +454,95 @@
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.04</span>
                     <h2 class="text-4xl font-bold text-text-main mt-4">Se présenter sur Internet</h2>
                 </div>
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
+
+                    <!-- CONTEXTE -->
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et le but du projet</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte et objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            Pour ce projet individuel, le but était de créer un site web complet en partant de zéro. Il fallait utiliser ce qu'on avait vu en cours (HTML et CSS) mais avec une grosse contrainte : respecter des normes très strictes d'accessibilité sur le web (pour les malvoyants par exemple).
+                            C'était un projet individuel : concevoir et développer un site web <strong>multipage en HTML/CSS</strong> sur un thème libre. Le cahier des charges était précis — minimum 3 pages, charte graphique cohérente, responsive design, animations CSS, validation <strong>W3C</strong> sans erreur et conformité <strong>WCAG 2.0 AA</strong> pour l'accessibilité. Le code devait être versionné sur <strong>GitHub</strong> avec des commits explicites, et le site hébergé via <strong>GitHub Pages</strong>.
                         </p>
-                    </div>
-                    <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Ce que j'ai fait concrètement</h4>
-                        <p class="text-text-muted leading-relaxed">
-                            J'ai décidé de faire mon site sur le <strong>FC Barcelone</strong>. J'ai codé la structure des pages (calendrier des matchs, fiches des joueurs) en HTML, et j'ai géré tout l'aspect visuel avec du CSS (en utilisant Flexbox et Grid pour que le site s'adapte aux tailles d'écrans).
+                        <p class="text-text-muted leading-relaxed mt-3">
+                            J'ai choisi de faire mon site sur le <strong>FC Barcelone</strong> — l'effectif 2025, le calendrier des matchs et l'histoire du club. Un sujet que je connaissais bien, ce qui m'a permis de me concentrer sur le technique plutôt que de chercher du contenu.
                         </p>
                     </div>
 
-                    <div class="mt-8 border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-4">3. Trace Visuelle : Rendu du Site Web</h4>
-                        <p class="text-text-muted text-sm mb-4">Voici la page d'accueil de mon site, avec les couleurs du club et les fonctionnalités demandées.</p>
-                        <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
-                            <img src="sae14.png" alt="Aperçu du site FC Barcelone réalisé pour la SAÉ 1.04" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- AC -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Apprentissages Critiques visés</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 13.01</strong><p class="text-text-muted text-xs mt-0.5">Utiliser un système informatique et ses outils</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 13.04</strong><p class="text-text-muted text-xs mt-0.5">Connaître l'architecture et les normes d'un site Web</p></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience</h4>
+                    <!-- TACHES -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce que j'ai fait concrètement</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">Le site est composé de trois pages principales :</p>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1">Accueil <span class="font-normal text-text-muted">(index.html)</span></h5>
+                                <p class="text-text-muted text-sm">Présentation de l'effectif 2025, mise en avant de Lamine Yamal, palmarès du club. J'ai ajouté une <strong>animation CSS de chargement</strong> (loader) au démarrage de la page.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1">Calendrier <span class="font-normal text-text-muted">(calendrier.html)</span></h5>
+                                <p class="text-text-muted text-sm">Affichage des matchs avec mise en page en <strong>CSS Grid</strong>, classement de La Liga et forme récente de l'équipe. Le contenu est statique — je ne savais pas encore connecter une API pour qu'il se mette à jour automatiquement, c'est quelque chose que je voudrais apprendre.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1">À propos <span class="font-normal text-text-muted">(apropos.html)</span></h5>
+                                <p class="text-text-muted text-sm">Contexte du projet, explication du choix du thème, présentation de l'auteur.</p>
+                            </div>
+                        </div>
+                        <p class="text-text-muted leading-relaxed mt-4 text-sm">Sur le plan technique : <strong>Flexbox</strong> pour la structure globale et le menu, <strong>CSS Grid</strong> pour le calendrier, <strong>Media Queries</strong> pour le responsive (les colonnes s'empilent sur mobile), et animations CSS sur le loader et les survols du menu.</p>
+                    </div>
+
+                    <!-- LIEN + EXTRAITS CODE -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4">4. Résultat — Consulter le site & extraits de code</h4>
+
+                        <a href="https://ahmed2720.github.io/sae/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-dark text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg shadow-brand-primary/30 hover:-translate-y-0.5 mb-6">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visiter le site en ligne
+                        </a>
+
+                        <p class="text-text-muted text-sm mb-3 font-medium">Deux extraits du code source pour illustrer la technique :</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-text-muted text-xs mb-2 italic">HTML — Structure du calendrier des matchs</p>
+                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
+                                    <img src="sae14html.png" alt="Extrait HTML du calendrier SAÉ 1.04" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-text-muted text-xs mb-2 italic">CSS — Mise en page Grid et styles des matchs</p>
+                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
+                                    <img src="sae14_css.png" alt="Extrait CSS du calendrier SAÉ 1.04" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AUTOEVALUATION -->
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
-                            <strong>Les difficultés :</strong> Passer les tests officiels (validateur W3C et normes WCAG) a été vraiment long. Le moindre problème de couleur ou de balise mal placée générait une erreur qu'il fallait corriger.
+                            <strong>Les difficultés :</strong> La validation W3C et WCAG 2.0 AA a été la partie la plus chronophage. Le moindre attribut <code class="bg-cream-bg px-1 rounded text-xs">alt</code> manquant ou un contraste de couleur insuffisant faisait tomber le test. J'ai dû retravailler plusieurs fois ma palette de couleurs pour que le ratio de contraste soit suffisant.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Ce que j'aurais fait autrement :</strong> Tester la validation W3C au fur et à mesure plutôt qu'à la fin. Corriger 30 erreurs d'un coup c'est vraiment plus long que de les corriger une par une au fil du développement.
                         </p>
                         <p class="text-text-muted leading-relaxed">
-                            <strong>Ce que j'ai retenu :</strong> Ça demande beaucoup de patience, mais ça m'a appris à respecter un cahier des charges très strict, ce qui est très courant dans le monde professionnel.
+                            <strong>Ce que j'en tire :</strong> Cette SAÉ m'a appris à respecter un cahier des charges strict avec des critères de qualité mesurables. Coder un site qui "marche" c'est une chose, coder un site qui passe les normes d'accessibilité c'en est une autre. C'est quelque chose que je réutiliserai — dans ce portfolio par exemple, j'ai gardé ces réflexes en tête.
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -706,6 +764,4 @@
     </script>
 </body>
 </html>
-
-
 
