@@ -267,34 +267,113 @@
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.02</span>
                     <h2 class="text-4xl font-bold text-text-main mt-4">S'initier aux réseaux informatiques</h2>
                 </div>
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
+
+                    <!-- CONTEXTE -->
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et le but du projet</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte et objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            Nous devions jouer le rôle de techniciens réseaux pour une fausse entreprise appelée <strong>Fibre&Company</strong>. Le but était de construire toute leur architecture réseau de A à Z en respectant un cahier des charges précis. C'est le cœur de notre formation.
+                            Dans cette SAÉ, on nous a placés dans la peau de techniciens réseaux recrutés par une entreprise fictive, <strong>Fibre&Company</strong>, spécialisée dans le déploiement de la fibre optique. L'entreprise avait un réseau vieillissant, sans aucune segmentation, et devait doubler ses effectifs. Notre mission : concevoir et déployer un prototype d'infrastructure réseau complète, en partant de zéro, avant une éventuelle mise en production.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mt-3">
+                            Le projet couvrait trois grandes parties : la <strong>configuration réseau</strong> (VLANs, routage, agrégation de liens, STP), les <strong>services Linux</strong> sur une VM Debian déployée via Proxmox, et la <strong>sécurité</strong> des équipements. La SAÉ s'est conclue par un <strong>examen individuel Cisco NetAcad</strong> "Introduction aux réseaux" et un <strong>TP noté de 30 minutes</strong> sur table.
                         </p>
                     </div>
-                    <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Ce que j'ai fait concrètement</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            Dans mon groupe, j'ai beaucoup travaillé sur la configuration du matériel (grâce aux bases vues sur Cisco NetAcad). Mes actions principales :
-                        </p>
-                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
-                            <li>Création du schéma du réseau sur le simulateur <strong>Cisco Packet Tracer</strong> pour faire des tests.</li>
-                            <li>Configuration physique des switchs (commutateurs) et des routeurs avec <strong>Putty</strong>, en ligne de commande.</li>
-                            <li>Mise en place des adresses IP et séparation du réseau en créant des VLANs.</li>
-                            <li>Installation d'une machine virtuelle sous Linux <strong>Debian 13</strong> via <strong>Proxmox</strong> pour faire fonctionner les services de l'entreprise (serveur web, partages de fichiers).</li>
-                        </ul>
+
+                    <!-- AC VISES -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Apprentissages Critiques visés</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.02</strong><p class="text-text-muted text-xs mt-0.5">Comprendre l'architecture des systèmes numériques</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.03</strong><p class="text-text-muted text-xs mt-0.5">Configurer les fonctions de base du réseau local</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.04</strong><p class="text-text-muted text-xs mt-0.5">Maîtriser les systèmes d'exploitation (Linux Debian CLI)</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.05</strong><p class="text-text-muted text-xs mt-0.5">Identifier les dysfonctionnements du réseau local</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience</h4>
+
+                    <!-- TACHES -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce que j'ai fait concrètement</h4>
+
+                        <p class="text-text-muted leading-relaxed mb-4">Le projet s'est organisé autour de trois axes principaux sur lesquels j'ai contribué activement :</p>
+
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-network-wired text-brand-primary mr-2"></i>Partie réseau — Switchs & routeur Cisco</h5>
+                                <p class="text-text-muted text-sm leading-relaxed">Création et configuration de 6 VLANs (Comptabilité 210, Administratif 220, Vente 230, Supervision 240, Admin Info 250, Services 200). Mise en place des trunks tagués, du VLAN natif 696 pour les ports non utilisés, des liens agrégés LACP en Gb entre les trois commutateurs, et du protocole <strong>RSTP</strong> avec le switch 3560 forcé en root bridge. Configuration du routage inter-VLANs et du service <strong>DHCP</strong> directement sur le 3560 pour tous les VLANs sauf le VLAN serveurs. Tout ça en ligne de commande via <strong>Putty</strong>.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-brands fa-linux text-brand-primary mr-2"></i>Partie services — VM Debian 13 sous Proxmox</h5>
+                                <p class="text-text-muted text-sm leading-relaxed">Déploiement d'une machine virtuelle Debian 13 sans interface graphique sur le serveur Proxmox. Configuration du partitionnement sur 4 disques (ext4, XFS), création des utilisateurs via <strong>newusers</strong> et génération automatique des mots de passe avec <strong>pwgen</strong>. Installation et configuration d'<strong>Apache2</strong> (dépôt du site SAÉ 1.04), d'un service de partage de fichiers <strong>SMB</strong>, d'un cache DNS <strong>Bind9</strong>, et d'un service <strong>TFTP</strong> pour sauvegarder les configs des équipements.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-shield-halved text-brand-primary mr-2"></i>Partie sécurité</h5>
+                                <p class="text-text-muted text-sm leading-relaxed">Désactivation de Telnet et HTTP/HTTPS sur tous les équipements, accès SSH par login/mot de passe sur les switchs et routeur, mise en place d'une paire de clés SSH entre le serveur Debian et une station d'administration (taille justifiée d'après les recommandations ANSSI vues en SAÉ 1.01), désactivation de SSH v1 et des algorithmes non recommandés.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRACES VISUELLES -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4">4. Traces visuelles</h4>
+
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-text-muted text-sm mb-3 font-medium">Schéma logique de l'infrastructure réseau que nous avons déployée :</p>
+                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
+                                    <img src="schemalogique_drawio.png" alt="Schéma logique de l'infrastructure réseau Fibre&Company" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <p class="text-text-muted text-xs mt-2 italic text-center">Schéma logique — Infrastructure complète avec VLANs, routeur, SWR root bridge et VM Debian.</p>
+                            </div>
+
+                            <div>
+                                <p class="text-text-muted text-sm mb-3 font-medium">Photo de notre maquette réelle en salle de TP :</p>
+                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
+                                    <img src="photo_switch.jpeg" alt="Maquette réelle des switchs Cisco en salle de TP" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <p class="text-text-muted text-xs mt-2 italic text-center">Maquette physique — Câblage des switchs Cisco et du routeur en salle 3250.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXAMEN & TP NOTE -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">5. Évaluations individuelles</h4>
+                        <p class="text-text-muted leading-relaxed text-sm">
+                            En parallèle du projet groupe, j'ai passé l'<strong>examen Cisco NetAcad "Introduction aux réseaux"</strong> qui couvre les modèles OSI/DoD, l'adressage IPv4, les protocoles de transport et les bases de la sécurité. Ça m'a permis de consolider et de formaliser tout ce qu'on avait mis en pratique sur la maquette — des fois tu fais les choses sans vraiment avoir les mots pour les expliquer, l'examen t'oblige à structurer ta pensée. Un <strong>TP noté de 30 minutes</strong> en individuel est venu compléter l'évaluation, sur des manipulations directes en ligne de commande.
+                        </p>
+                    </div>
+
+                    <!-- AUTOEVALUATION -->
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
-                            <strong>Les difficultés :</strong> La technique, ça allait, mais communiquer dans le groupe était compliqué. Comme le réseau est grand, si quelqu'un change un paramètre sur son routeur sans prévenir les autres, tout tombe en panne.
+                            <strong>Les difficultés :</strong> Le plus dur n'était pas technique. Sur un réseau à plusieurs mains, dès que quelqu'un modifie un paramètre sans prévenir les autres, tout peut tomber. On a eu quelques moments de panique où on ne comprenait plus pourquoi le ping ne passait plus, et il s'avérait que c'était une config changée en silence sur un autre switch.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Comment on a géré :</strong> On s'est imposé une règle simple — tout changement annoncé avant d'être fait, et noté dans un doc partagé. Ça a vraiment changé l'ambiance de travail.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Ce que j'aurais fait autrement :</strong> Je me serais davantage impliqué dans la partie Proxmox dès le début plutôt que de me concentrer uniquement sur le réseau. La partie virtualisation était moins familière pour moi et j'ai dû monter en compétence rapidement en fin de projet.
                         </p>
                         <p class="text-text-muted leading-relaxed">
-                            <strong>Ce que j'ai retenu :</strong> On a résolu le problème en faisant des comptes-rendus à chaque étape pour se tenir au courant. Techniquement, je sais maintenant configurer un petit réseau d'entreprise, mais j'ai surtout appris que la communication dans une équipe technique est primordiale.
+                            <strong>Ce que j'en tire :</strong> Cette SAÉ m'a prouvé que je suis capable de configurer une infrastructure réseau réelle de bout en bout. Je sais maintenant ce que c'est de travailler sur du vrai matériel Cisco, pas juste un simulateur. Et surtout j'ai compris que dans un projet technique, la communication dans l'équipe est aussi critique que la technique elle-même — c'est quelque chose que je vais garder en tête pour tous mes projets futurs.
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -627,5 +706,6 @@
     </script>
 </body>
 </html>
+
 
 
