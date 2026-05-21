@@ -299,6 +299,9 @@
             </div>
         </div>
 
+        <!-- ============================================================ -->
+        <!-- PAGE SAÉ 1.03 — VERSION AMÉLIORÉE (extraite du nouveau code) -->
+        <!-- ============================================================ -->
         <div id="page-sae-103" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
             <button onclick="navigateTo('page-sae-liste')" class="text-text-muted hover:text-brand-primary font-bold mb-6 inline-flex items-center gap-2 text-sm"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</button>
             <div class="space-y-8">
@@ -306,34 +309,61 @@
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.03</span>
                     <h2 class="text-4xl font-bold text-text-main mt-4">Découvrir un dispositif de transmission</h2>
                 </div>
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et le but du projet</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et les objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            Ce projet consistait à comprendre comment la donnée passe concrètement dans les câbles. Nous avons fait des mesures en laboratoire sur deux supports différents : les vieux câbles en cuivre et la fibre optique (qui est beaucoup plus utilisée aujourd'hui). 
+                            L'objectif de cette SAÉ était de caractériser deux supports de transmission fondamentaux : la <strong>fibre optique</strong> et le <strong>câble coaxial</strong> en cuivre. Le but était de comprendre le comportement des signaux et de vérifier la qualité des liaisons en laboratoire.
                         </p>
                     </div>
-                    <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Ce que j'ai fait concrètement</h4>
+
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Partie 1 : Mesure sur la Fibre Optique</h4>
                         <p class="text-text-muted leading-relaxed mb-4">
-                            C'était un vrai travail de "technicien télécoms". Je me suis surtout concentré sur la fibre optique dans notre groupe :
+                            Pour l'optique, nous avons réalisé une mesure de photométrie sur une bobine de fibre monomode. J'ai d'abord calculé la perte théorique de la liaison (6,58 dB), puis nous avons procédé à la mesure réelle avec un photomètre (à 1310 nm).
                         </p>
-                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
-                            <li>Mesure des défauts sur un câble cuivre (méthode DTF) pour voir à quelle distance se trouve un problème éventuel.</li>
-                            <li>Utilisation d'un <strong>oscilloscope</strong> pour voir physiquement le signal passer.</li>
-                            <li>Rédaction complète du compte-rendu sur la <strong>fibre optique</strong>.</li>
-                            <li>J'ai calculé la perte théorique de puissance (en décibels, dB) de notre câble de fibre optique, puis je l'ai comparée avec la vraie mesure faite par la machine.</li>
-                        </ul>
+                        
+                        <div class="mb-6">
+                            <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group max-w-2xl mx-auto">
+                                <img src="sae13.png" alt="Mesure photométrique sur la fibre optique" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <p class="text-text-muted text-xs mt-2 italic text-center">Trace 1 : Détail du schéma de la liaison et des mesures d'atténuation sur la fibre optique.</p>
+                        </div>
+
+                        <a href="ABDELMOUNIM-BENOUAILI-OTGONERDENE-BOUALA-SAE13-Photometrie.pdf" download class="w-full sm:w-auto inline-flex bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-2 px-6 rounded-lg transition-all text-sm items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-pdf"></i> Voir mon compte-rendu Optique
+                        </a>
                     </div>
+
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Partie 2 : Mesure sur le Cuivre (13,86 mètres)</h4>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Pour le câble coaxial, l'objectif était de déterminer sa longueur exacte en mesurant le temps de parcours d'une impulsion électrique. À l'aide d'un générateur de fonctions (GBF) et d'un oscilloscope, j'ai relevé le temps de vol du signal. Sachant que l'onde se déplace à 66 % de la vitesse de la lumière dans ce câble (NVP = 0,66), le calcul m'a permis de déduire avec précision que le câble mesurait <strong>13,86 mètres</strong>.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group max-w-2xl mx-auto">
+                                <img src="sae13.2.png" alt="Mesure à l'oscilloscope sur le cuivre (13,86m)" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <p class="text-text-muted text-xs mt-2 italic text-center">Trace 2 : Capture de l'oscilloscope avec le GBF montrant le signal électrique (résultat du calcul : 13,86m).</p>
+                        </div>
+
+                        <a href="ABDELMOUNIM-BENOUAILI-OTGONERDENE-BOUALA-SAE13-DTF.pdf" download class="w-full sm:w-auto inline-flex bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-2 px-6 rounded-lg transition-all text-sm items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-pdf"></i> Voir mon compte-rendu Cuivre
+                        </a>
+                    </div>
+
                     <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience et compétences</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
-                            <strong>Les difficultés :</strong> On a eu beaucoup moins de temps d'explications (30 minutes) que les autres groupes avant de commencer les manipulations sur la fibre. On était un peu perdus au début.
+                            <strong>Les difficultés :</strong> Notre groupe n'a eu que 30 minutes d'explications sur la fibre optique au lieu des 2 heures prévues. Il a donc fallu comprendre très vite comment calibrer les appareils (faire le "zéro") pour ne pas fausser les mesures.
                         </p>
                         <p class="text-text-muted leading-relaxed">
-                            <strong>Ce que j'ai retenu :</strong> J'ai dû faire mes propres recherches sur internet pour bien comprendre comment ça marchait. Ça a fini par payer et j'ai réussi à bien maîtriser le sujet. J'ai aimé ce côté "recherche par soi-même".
+                            <strong>Ce que j'ai retenu :</strong> J'ai compensé ce manque de temps en faisant mes propres recherches de manière autonome. Ce projet m'a permis de valider la compétence <strong>RT2</strong>, et surtout l'<strong>AC 12.01</strong> (Mesurer et analyser les signaux physiques) en sachant manipuler correctement un oscilloscope et un photomètre.
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -599,4 +629,3 @@
 </html>
 
 
-  
