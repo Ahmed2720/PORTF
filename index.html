@@ -554,31 +554,122 @@
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.05</span>
                     <h2 class="text-4xl font-bold text-text-main mt-4">Traitement des données</h2>
                 </div>
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
+
+                    <!-- CONTEXTE -->
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et le but du projet</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte et objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            C'était mon premier "vrai" projet de programmation. L'objectif était de créer un programme capable d'aller chercher des informations sur internet (via une API), de trier ces informations et d'en faire quelque chose d'utile et de lisible.
+                            C'était le premier vrai projet de programmation de l'année, réalisé en binôme avec Maxence Yazdani. Le but : exploiter les <strong>API d'OpenStreetMap</strong> en Python pour récupérer des données géographiques, calculer des statistiques dessus, et produire des fiches de résultats aux formats <strong>Markdown et HTML</strong>. Le projet était en grande autonomie — pas de TP guidé, juste un cahier des charges et de la débrouille.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mt-3">
+                            Le projet se divisait en deux sous-parties : <strong>fiche_osm</strong> (générer automatiquement une fiche sur un point d'intérêt OSM à partir de son identifiant) et <strong>infos_locales</strong> (récupérer tous les objets d'un certain type sur une zone et calculer des statistiques). Pour notre sujet, on a choisi les <strong>hôtels de Barcelone</strong> — le choix était libre, et le Barça aidant, la décision s'est vite imposée.
                         </p>
                     </div>
-                    <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Ce que j'ai fait concrètement</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            J'ai codé en <strong>Python</strong> pour ce projet, avec les actions suivantes :
-                        </p>
-                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
-                            <li>Connexion à l'API de cartes géographiques <strong>OpenStreetMap</strong>.</li>
-                            <li>Lecture de données complexes au format <strong>JSON</strong> et <strong>XML</strong>.</li>
-                            <li>Utilisation de la librairie <strong>Pillow</strong> pour télécharger des morceaux de cartes et ajouter des points dessus.</li>
-                            <li>Écriture du résultat final dans un fichier texte bien formaté (en Markdown).</li>
-                        </ul>
+
+                    <!-- AC -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Apprentissages Critiques visés</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 13.01</strong><p class="text-text-muted text-xs mt-0.5">Utiliser un système informatique et ses outils</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 13.02</strong><p class="text-text-muted text-xs mt-0.5">Lire, exécuter, modifier et corriger un programme</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 13.05</strong><p class="text-text-muted text-xs mt-0.5">Traiter des données hétérogènes (JSON, API REST)</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience</h4>
+
+                    <!-- CE QU ON A FAIT -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce qu'on a fait concrètement</h4>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-map-location-dot text-brand-primary mr-2"></i>fiche_osm.py — Fiche d'un point d'intérêt</h5>
+                                <p class="text-text-muted text-sm leading-relaxed">On appelle l'<strong>API REST d'OSM</strong> avec un identifiant de nœud, on récupère toutes les données en JSON, on génère une fiche Markdown structurée et on la convertit en HTML. On a aussi ajouté la génération d'une mini-carte via l'<strong>API de tuiles OSM</strong> — téléchargement de la tuile correspondant aux coordonnées du point, puis dessin d'un marqueur rond rouge avec <strong>Pillow</strong>.</p>
+                            </div>
+                            <div class="border-l-4 border-brand-primary pl-4 py-1">
+                                <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-brands fa-python text-brand-primary mr-2"></i>info_locales.py — Statistiques sur les hôtels de Barcelone</h5>
+                                <p class="text-text-muted text-sm leading-relaxed">Requête via l'<strong>API Overpass</strong> en Overpass QL pour récupérer tous les hôtels de Barcelone. On calcule ensuite deux statistiques : la <strong>répartition par nombre d'étoiles</strong> et la <strong>proportion d'hôtels accessibles en fauteuil roulant</strong>. Le résultat est exporté en fichier Markdown puis converti en HTML.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXTRAITS CODE -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4">4. Extraits de code</h4>
+                        <p class="text-text-muted text-sm mb-4">Les deux scripts principaux du projet :</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-text-muted text-xs mb-2 italic">osm.py — Fiche d'un nœud OSM + carte Pillow</p>
+                                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto border border-cream-border shadow-inner">
+                                    <pre class="text-xs text-green-300 leading-relaxed whitespace-pre-wrap"><code>def get_node(id:int) -> dict:
+    url = f"https://api.openstreetmap.org
+           /api/0.6/node/{id}.json"
+    reponse = requests.get(url)
+    donnes = reponse.json()
+    return donnes['elements'][0]
+
+def generate_map(lat, lon):
+    zoom = 16
+    x, y = deg2num(lat, lon, zoom)
+    url = f"https://tile.openstreetmap
+           .org/{zoom}/{x}/{y}.png"
+    reponse = requests.get(url,
+        headers={"User-Agent":"sae"})
+    # dessine un rond rouge au centre
+    draw.ellipse([123,123,133,133],
+                 fill='red')
+    img.save("carte_marqueur.png")</code></pre>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-text-muted text-xs mb-2 italic">info_locales.py — Stats hôtels Barcelone</p>
+                                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto border border-cream-border shadow-inner">
+                                    <pre class="text-xs text-green-300 leading-relaxed whitespace-pre-wrap"><code>def compute_statistics2(donnees):
+    # parcourt chaque hôtel
+    for hotel in elements:
+        tags = hotel.get('tags', {})
+        if 'stars' in tags:
+            nb = tags['stars']
+            dico_etoiles[nb] += 1
+            total_etoiles += 1
+        if 'wheelchair' in tags:
+            acces = tags['wheelchair']
+            dico_handi[acces] += 1
+            total_handi += 1
+    # calcul des pourcentages
+    for cle, valeur in dico_etoiles:
+        pct = int(valeur/total_etoiles
+                  * 100)
+    return resultat_etoiles,
+           resultat_handicap</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AUTOEVALUATION -->
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Les difficultés :</strong> Le plus délicat a été la partie statistiques. Au départ, les pourcentages ne s'additionnaient pas à 100% parce que beaucoup d'hôtels n'ont pas d'étoiles renseignées dans OSM — on divisait par le nombre total d'éléments alors qu'on aurait dû diviser uniquement par ceux qui ont l'attribut. On a aussi eu un moment où l'API de tuiles renvoyait "access blocked" — en cherchant dans la doc, on a trouvé qu'il fallait ajouter un <code class="bg-cream-bg px-1 rounded text-xs">User-Agent</code> dans la requête.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Ce qui n'a pas fonctionné :</strong> Le marqueur sur la carte n'est pas précisément positionné sur l'hôtel — on a réussi à télécharger la bonne tuile et à dessiner un point rouge, mais le calcul exact de la position en pixels sur l'image reste approximatif. On ne l'a pas résolu, mais on comprend pourquoi ça ne marche pas.
+                        </p>
                         <p class="text-text-muted leading-relaxed">
-                            C'était super intéressant parce qu'on sortait des petits exercices de TP pour faire un vrai programme utile. Ça m'a prouvé que je savais manipuler de la donnée brute et m'en servir. C'est une base solide pour plus tard, quand on devra faire des petits scripts pour automatiser des choses sur nos réseaux.
+                            <strong>Ce que j'en tire :</strong> C'est la première fois que j'écrivais un programme qui fait quelque chose de concret — il va chercher des vraies données sur internet et produit un vrai document lisible. Le fait de travailler en autonomie complète sur un projet ouvert, c'est assez différent d'un TP guidé. On a dû lire des docs, tester, se tromper, et recommencer. C'est clairement ce type de projet qui apprend le plus.
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
