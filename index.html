@@ -219,43 +219,74 @@
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs px-4 py-1.5 rounded-full uppercase tracking-wider font-bold shadow-sm">SAÉ 1.01</span>
                     <h2 class="text-4xl font-bold text-text-main mt-4">Sensibilisation à l'hygiène informatique et à la cybersécurité</h2>
                 </div>
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-6 shadow-sm">
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
+
+                    <!-- CONTEXTE -->
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et le but du projet</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte et objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            L'objectif de cette SAÉ était de nous faire prendre conscience des risques liés à l'informatique aujourd'hui. De mon côté, j'ai suivi les cours du <strong>MOOC de l'ANSSI</strong> pour apprendre les bons gestes. Ensuite, en groupe, nous avons travaillé sur un cas pratique (un TP) pour voir concrètement comment les piratages peuvent arriver, et nous avons présenté nos recherches à l'oral.
+                            L'objectif de cette SAÉ était de prendre conscience des risques liés à la sécurité informatique. J'ai suivi les modules du <strong>MOOC de l'ANSSI</strong> pour apprendre les bonnes pratiques. Ensuite, en groupe, nous avons travaillé sur un cas pratique pour voir concrètement comment des attaques peuvent arriver, et nous avons présenté nos recherches à l'oral.
                         </p>
-                    </div>
-                    <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">2. Ce que j'ai fait concrètement</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            Avec mon équipe, nous avons choisi de travailler sur les <strong>mots de passe utilisateurs</strong>. Voici les tâches que nous avons menées :
-                        </p>
-                        <ul class="list-disc list-inside text-text-muted space-y-2 ml-2">
-                            <li>Recherche sur ce qui fait un bon mot de passe (complexité, renouvellement) selon l'ANSSI.</li>
-                            <li>Utilisation de l'outil <strong>Hydra</strong> sous Kali Linux (TP "Jean Boomer") pour comprendre comment fonctionne une attaque par "force brute".</li>
-                            <li>Utilisation de <strong>CUPP</strong> pour voir comment on peut générer une liste de mots de passe probables en connaissant juste quelques infos sur une cible.</li>
-                            <li>Recherche sur l'utilité des gestionnaires de mots de passe pour se protéger.</li>
-                        </ul>
                     </div>
 
-                    <div class="mt-8 border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-4">3. Trace Visuelle : Présentation de notre travail</h4>
-                        <p class="text-text-muted text-sm mb-4">Voici la page de garde de la présentation que nous avons faite pour expliquer nos recherches.</p>
-                        <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
-                            <img src="sae11.png" alt="Page de garde présentation SAÉ 1.01" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- AC -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Apprentissages Critiques visés</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.02</strong><p class="text-text-muted text-xs mt-0.5">Comprendre l'architecture des systèmes numériques et les principes de communication</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.04</strong><p class="text-text-muted text-xs mt-0.5">Maîtriser les systèmes d'exploitation afin d'interagir avec eux (Kali Linux, CLI)</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.05</strong><p class="text-text-muted text-xs mt-0.5">Identifier les dysfonctionnements et failles de sécurité du réseau local</p></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience</h4>
+                    <!-- TACHES -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce que j'ai fait concrètement</h4>
+                        <p class="text-text-muted leading-relaxed mb-3">Mon groupe a travaillé sur le lot <strong>mots de passe utilisateurs</strong>. Voici mes actions précises :</p>
+                        <ul class="space-y-2 text-text-muted text-sm">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Lecture et synthèse des recommandations <strong>ANSSI</strong> sur la politique de mots de passe (longueur minimale, caractères spéciaux, renouvellement).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Utilisation de <strong>Hydra</strong> sous Kali Linux sur le TP "Jean Boomer" : lancement d'une attaque par dictionnaire sur un service SSH, observation des logs côté serveur pour comprendre la détection.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Utilisation de <strong>CUPP</strong> (Custom User Passwords Profiler) : génération d'une liste de mots de passe probables à partir d'informations personnelles fictives, pour illustrer le social engineering.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Rédaction de la partie sur les <strong>gestionnaires de mots de passe</strong> (KeePass, Bitwarden) : comparaison des approches local vs cloud, avantages pour un utilisateur non-technique.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Préparation et présentation de la partie orale : j'ai pris en charge l'explication du fonctionnement de la force brute et la démonstration Hydra devant le groupe.</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- TRACE -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4">4. Traces</h4>
+                        <p class="text-text-muted text-sm mb-3">Page de garde de notre présentation orale :</p>
+                        <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group mb-4">
+                            <img src="sae11.png" alt="Page de garde présentation SAÉ 1.01" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <a href="canva.pdf" download class="inline-flex items-center gap-2 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-2 px-6 rounded-lg transition-all text-sm">
+                            <i class="fa-solid fa-file-pdf"></i> Télécharger la présentation complète (PDF)
+                        </a>
+                    </div>
+
+                    <!-- AUTOEVALUATION -->
+                    <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
-                            <strong>Les difficultés :</strong> Ce n'était pas évident de bien s'organiser en groupe au début. On a dû apprendre à bien répartir les tâches pour que tout le monde ait un temps de parole équitable pour l'oral.
+                            <strong>Les difficultés :</strong> S'organiser en groupe au départ n'était pas évident. On a dû répartir les tâches correctement pour que chacun ait une contribution réelle et un temps de parole équitable à l'oral.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Ce que j'aurais fait autrement :</strong> J'aurais mieux documenté les captures d'écran des outils pendant les manipulations pour avoir des preuves plus concrètes dans la présentation.
                         </p>
                         <p class="text-text-muted leading-relaxed">
-                            <strong>Ce que j'ai retenu :</strong> Ça m'a vraiment fait réaliser à quel point on est vulnérable si on ne fait pas attention. J'ai compris pourquoi on nous demande des mots de passe aussi compliqués, et j'ai appris à utiliser des outils système sous Linux.
+                            <strong>Ce que j'en tire :</strong> Cette SAÉ m'a vraiment fait prendre conscience de la vulnérabilité des systèmes face à des attaques simples. Manipuler Hydra et CUPP m'a montré concrètement pourquoi les politiques de mots de passe strictes existent. Je sais maintenant utiliser un environnement Kali Linux en ligne de commande, ce qui m'a aussi servi pour la SAÉ 1.02 (Debian, SSH).
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -313,15 +344,32 @@
                         <div class="space-y-4">
                             <div class="border-l-4 border-brand-primary pl-4 py-1">
                                 <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-network-wired text-brand-primary mr-2"></i>Partie réseau — Switchs & routeur Cisco</h5>
-                                <p class="text-text-muted text-sm leading-relaxed">Création et configuration de 6 VLANs (Comptabilité 210, Administratif 220, Vente 230, Supervision 240, Admin Info 250, Services 200). Mise en place des trunks tagués, du VLAN natif 696 pour les ports non utilisés, des liens agrégés LACP en Gb entre les trois commutateurs, et du protocole <strong>RSTP</strong> avec le switch 3560 forcé en root bridge. Configuration du routage inter-VLANs et du service <strong>DHCP</strong> directement sur le 3560 pour tous les VLANs sauf le VLAN serveurs. Tout ça en ligne de commande via <strong>Putty</strong>.</p>
+                                <ul class="space-y-1.5 text-text-muted text-sm mt-2">
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Création et configuration de 6 VLANs via CLI Cisco (Putty) : Comptabilité 210, Administratif 220, Vente 230, Supervision 240, Admin Info 250, Services 200 — attribution des ports par VLAN sur SW1 et SW2.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Configuration des ports tagués (trunks 802.1Q) entre les switchs et le SWR, et passage du VLAN natif en 696 sur les ports non utilisés pour éviter les accès accidentels.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Mise en place des <strong>liens agrégés LACP</strong> (2 liens Gb) entre les 3 commutateurs, et configuration du <strong>RSTP</strong> avec le 3560 forcé root bridge via manipulation de la priorité.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Configuration du <strong>routage inter-VLANs</strong> sur le 3560 (sous-interfaces L3) et du service <strong>DHCP</strong> pour chaque VLAN utilisateur, avec exclusion du VLAN 200 (serveurs à adressage fixe).</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Configuration du routeur 2911 : routage statique vers la box, lien d'interconnexion en /30 avec le 3560 configuré en port L3.</span></li>
+                                </ul>
                             </div>
                             <div class="border-l-4 border-brand-primary pl-4 py-1">
                                 <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-brands fa-linux text-brand-primary mr-2"></i>Partie services — VM Debian 13 sous Proxmox</h5>
-                                <p class="text-text-muted text-sm leading-relaxed">Déploiement d'une machine virtuelle Debian 13 sans interface graphique sur le serveur Proxmox. Configuration du partitionnement sur 4 disques (ext4, XFS), création des utilisateurs via <strong>newusers</strong> et génération automatique des mots de passe avec <strong>pwgen</strong>. Installation et configuration d'<strong>Apache2</strong> (dépôt du site SAÉ 1.04), d'un service de partage de fichiers <strong>SMB</strong>, d'un cache DNS <strong>Bind9</strong>, et d'un service <strong>TFTP</strong> pour sauvegarder les configs des équipements.</p>
+                                <ul class="space-y-1.5 text-text-muted text-sm mt-2">
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Déploiement d'une VM Debian 13 (sans GUI) sur Proxmox : configuration UEFI/OVMF, carte VirtioGPU, partitionnement manuel sur 4 disques (ext4 pour /, /tmp, /var, /BackupHome — XFS pour /home).</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Création automatique des comptes utilisateurs avec <strong>newusers</strong> à partir d'un fichier CSV fourni, génération des mots de passe aléatoires (10 caractères alphanumériques) avec <strong>pwgen</strong>.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Installation et configuration d'<strong>Apache2</strong> : hébergement du site web de la SAÉ 1.04, modification du port d'écoute, test de fonctionnement avec <code class="bg-cream-bg px-1 rounded">curl</code> et <code class="bg-cream-bg px-1 rounded">lynx</code>.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Mise en place d'un partage <strong>Samba (SMB)</strong> : accès lecture libre pour tous les utilisateurs du LAN, accès écriture avec authentification réservé aux groupes Administratif et Admin Info.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Configuration d'un cache DNS <strong>Bind9</strong> et d'un serveur <strong>TFTP</strong> pour stocker manuellement les configurations IOS des commutateurs et du routeur.</span></li>
+                                </ul>
                             </div>
                             <div class="border-l-4 border-brand-primary pl-4 py-1">
                                 <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-shield-halved text-brand-primary mr-2"></i>Partie sécurité</h5>
-                                <p class="text-text-muted text-sm leading-relaxed">Désactivation de Telnet et HTTP/HTTPS sur tous les équipements, accès SSH par login/mot de passe sur les switchs et routeur, mise en place d'une paire de clés SSH entre le serveur Debian et une station d'administration (taille justifiée d'après les recommandations ANSSI vues en SAÉ 1.01), désactivation de SSH v1 et des algorithmes non recommandés.</p>
+                                <ul class="space-y-1.5 text-text-muted text-sm mt-2">
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Désactivation de <strong>Telnet</strong> et du service <strong>HTTP/HTTPS</strong> sur tous les équipements réseau Cisco, et activation de <strong>SSH v2</strong> avec authentification par login/mot de passe.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Génération d'une <strong>paire de clés SSH</strong> sur le serveur Debian et déploiement de la clé publique sur la station d'administration. Taille de clé choisie selon les recommandations ANSSI (vues en SAÉ 1.01).</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Désactivation de <strong>SSH v1</strong> et des algorithmes cryptographiques non recommandés par l'ANSSI dans la configuration du serveur OpenSSH.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Mise en place du <strong>port security</strong> sur les ports non utilisés et configuration du VLAN 696 comme VLAN natif pour isoler les ports inactifs du réseau de production.</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -391,14 +439,33 @@
                 
                 <div class="bg-cream-card border border-cream-border rounded-2xl p-8 space-y-8 shadow-sm">
                     <div>
-                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Le contexte et les objectifs</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2">1. Contexte et objectifs</h4>
                         <p class="text-text-muted leading-relaxed">
-                            L'objectif de cette SAÉ était de caractériser deux supports de transmission fondamentaux : la <strong>fibre optique</strong> et le <strong>câble coaxial</strong> en cuivre. Le but était de comprendre le comportement des signaux et de vérifier la qualité des liaisons en laboratoire.
+                            L'objectif de cette SAÉ était de caractériser deux supports de transmission fondamentaux : la <strong>fibre optique</strong> et le <strong>câble coaxial</strong> en cuivre. Il s'agissait d'effectuer des mesures en laboratoire, de comprendre le comportement des signaux et de vérifier la qualité des liaisons par le calcul et l'expérimentation.
                         </p>
                     </div>
 
+                    <!-- AC -->
                     <div class="border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Partie 1 : Mesure sur la Fibre Optique</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">2. Apprentissages Critiques visés</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 12.01</strong><p class="text-text-muted text-xs mt-0.5">Mesurer et analyser les signaux (oscilloscope, photomètre)</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 12.03</strong><p class="text-text-muted text-xs mt-0.5">Déployer des supports de transmission (fibre optique, câble coaxial)</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 12.05</strong><p class="text-text-muted text-xs mt-0.5">Communiquer avec un tiers et adapter son discours (restitution orale R212)</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Partie 1 : Mesure sur la Fibre Optique</h4>
                         <p class="text-text-muted leading-relaxed mb-4">
                             Pour l'optique, nous avons réalisé une mesure de photométrie sur une bobine de fibre monomode. J'ai d'abord calculé la perte théorique de la liaison (6,58 dB), puis nous avons procédé à la mesure réelle avec un photomètre (à 1310 nm).
                         </p>
@@ -416,7 +483,7 @@
                     </div>
 
                     <div class="border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Partie 2 : Mesure sur le Cuivre (13,86 mètres)</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">4. Partie 2 : Mesure sur le Cuivre (13,86 mètres)</h4>
                         <p class="text-text-muted leading-relaxed mb-4">
                             Pour le câble coaxial, l'objectif était de déterminer sa longueur exacte en mesurant le temps de parcours d'une impulsion électrique. À l'aide d'un générateur de fonctions (GBF) et d'un oscilloscope, j'ai relevé le temps de vol du signal. Sachant que l'onde se déplace à 66 % de la vitesse de la lumière dans ce câble (NVP = 0,66), le calcul m'a permis de déduire avec précision que le câble mesurait <strong>13,86 mètres</strong>.
                         </p>
@@ -433,8 +500,17 @@
                         </a>
                     </div>
 
+                    <!-- LIEN ORAL -->
+                    <div class="border-t border-cream-border pt-6">
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">5. Trace supplémentaire — Oral R212</h4>
+                        <p class="text-text-muted text-sm mb-3">En lien avec l'AC 12.05, cette SAÉ a également donné lieu à une restitution orale dans le cadre de la ressource R212 :</p>
+                        <a href="oral_r212.pdf" download class="inline-flex items-center gap-2 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-2 px-6 rounded-lg transition-all text-sm">
+                            <i class="fa-solid fa-file-pdf"></i> Télécharger le support oral R212
+                        </a>
+                    </div>
+
                     <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Mon retour d'expérience et compétences</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
                             <strong>Les difficultés :</strong> Notre groupe n'a eu que 30 minutes d'explications sur la fibre optique au lieu des 2 heures prévues. Il a donc fallu comprendre très vite comment calibrer les appareils (faire le "zéro") pour ne pas fausser les mesures.
                         </p>
@@ -593,11 +669,21 @@
                         <div class="space-y-4">
                             <div class="border-l-4 border-brand-primary pl-4 py-1">
                                 <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-solid fa-map-location-dot text-brand-primary mr-2"></i>fiche_osm.py — Fiche d'un point d'intérêt</h5>
-                                <p class="text-text-muted text-sm leading-relaxed">On appelle l'<strong>API REST d'OSM</strong> avec un identifiant de nœud, on récupère toutes les données en JSON, on génère une fiche Markdown structurée et on la convertit en HTML. On a aussi ajouté la génération d'une mini-carte via l'<strong>API de tuiles OSM</strong> — téléchargement de la tuile correspondant aux coordonnées du point, puis dessin d'un marqueur rond rouge avec <strong>Pillow</strong>.</p>
+                                <ul class="space-y-1.5 text-text-muted text-sm mt-2">
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">get_node(id)</code> : requête GET sur l'API REST OSM (<code class="bg-cream-bg px-1 rounded">api/0.6/node/{id}.json</code>), récupération de la réponse JSON et renvoi du dictionnaire de données.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">node_to_md()</code> : écriture d'un fichier Markdown structuré (titre, lien OSM, liste des attributs) à partir du dictionnaire, puis conversion en HTML via la librairie <code class="bg-cream-bg px-1 rounded">markdown</code>.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">generate_map(lat, lon)</code> : calcul des coordonnées de tuile avec la formule <code class="bg-cream-bg px-1 rounded">deg2num</code> (doc wiki OSM), téléchargement de la tuile PNG via l'API de tuiles avec User-Agent, dessin d'un marqueur rond rouge au centre avec <strong>Pillow</strong>.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Le script s'utilise aussi en ligne de commande : <code class="bg-cream-bg px-1 rounded">python3 osm.py</code> génère les fichiers md et HTML pour un nœud de test (id 192067263).</span></li>
+                                </ul>
                             </div>
                             <div class="border-l-4 border-brand-primary pl-4 py-1">
                                 <h5 class="text-text-main font-bold text-sm mb-1"><i class="fa-brands fa-python text-brand-primary mr-2"></i>info_locales.py — Statistiques sur les hôtels de Barcelone</h5>
-                                <p class="text-text-muted text-sm leading-relaxed">Requête via l'<strong>API Overpass</strong> en Overpass QL pour récupérer tous les hôtels de Barcelone. On calcule ensuite deux statistiques : la <strong>répartition par nombre d'étoiles</strong> et la <strong>proportion d'hôtels accessibles en fauteuil roulant</strong>. Le résultat est exporté en fichier Markdown puis converti en HTML.</p>
+                                <ul class="space-y-1.5 text-text-muted text-sm mt-2">
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">get_dataset2(requete)</code> : envoi d'une requête <strong>Overpass QL</strong> à l'API Overpass pour récupérer tous les hôtels de la zone Barcelone (filtre <code class="bg-cream-bg px-1 rounded">wikipedia=ca:Barcelona</code>), avec gestion du timeout (90s) et du code de retour HTTP.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">compute_statistics2(donnees)</code> : parcours de chaque hôtel, comptage des valeurs des attributs <code class="bg-cream-bg px-1 rounded">stars</code> et <code class="bg-cream-bg px-1 rounded">wheelchair</code> dans des dictionnaires, puis calcul des pourcentages en divisant par deux totaux séparés (correction guidée par M. Brisacier).</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Implémentation de <code class="bg-cream-bg px-1 rounded">dataset_to_md()</code> : génération d'un fichier Markdown complet avec les statistiques en tête (étoiles, accessibilité PMR) puis la liste exhaustive des hôtels avec leurs attributs et un lien OSM pour chacun.</span></li>
+                                    <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Fonction <code class="bg-cream-bg px-1 rounded">convert()</code> pour transformer le Markdown en HTML via la librairie <code class="bg-cream-bg px-1 rounded">markdown</code>, et fonction principale <code class="bg-cream-bg px-1 rounded">info_locales()</code> qui orchestre tout le pipeline.</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -631,26 +717,9 @@ def generate_map(lat, lon):
                                 </div>
                             </div>
                             <div>
-                                <p class="text-text-muted text-xs mb-2 italic">info_locales.py — Stats hôtels Barcelone</p>
-                                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto border border-cream-border shadow-inner">
-                                    <pre class="text-xs text-green-300 leading-relaxed whitespace-pre-wrap"><code>def compute_statistics2(donnees):
-    # parcourt chaque hôtel
-    for hotel in elements:
-        tags = hotel.get('tags', {})
-        if 'stars' in tags:
-            nb = tags['stars']
-            dico_etoiles[nb] += 1
-            total_etoiles += 1
-        if 'wheelchair' in tags:
-            acces = tags['wheelchair']
-            dico_handi[acces] += 1
-            total_handi += 1
-    # calcul des pourcentages
-    for cle, valeur in dico_etoiles:
-        pct = int(valeur/total_etoiles
-                  * 100)
-    return resultat_etoiles,
-           resultat_handicap</code></pre>
+                                <p class="text-text-muted text-xs mb-2 italic">Rapport de projet rendu (extrait)</p>
+                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
+                                    <img src="rapport_sae15.png" alt="Capture du rapport SAÉ 1.05" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
