@@ -245,6 +245,10 @@
                                 <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
                                 <div><strong class="text-text-main text-sm">AC 11.05</strong><p class="text-text-muted text-xs mt-0.5">Identifier les dysfonctionnements et failles de sécurité du réseau local</p></div>
                             </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.01</strong><p class="text-text-muted text-xs mt-0.5">Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur les équipements de réseaux et télécommunications</p></div>
+                            </div>
                         </div>
                     </div>
 
@@ -331,6 +335,10 @@
                             <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
                                 <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
                                 <div><strong class="text-text-main text-sm">AC 11.05</strong><p class="text-text-muted text-xs mt-0.5">Identifier les dysfonctionnements du réseau local</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 11.06</strong><p class="text-text-muted text-xs mt-0.5">Installer un poste client et expliquer la procédure de mise en place</p></div>
                             </div>
                         </div>
                     </div>
@@ -456,6 +464,10 @@
                             <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
                                 <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
                                 <div><strong class="text-text-main text-sm">AC 12.03</strong><p class="text-text-muted text-xs mt-0.5">Déployer des supports de transmission (fibre optique, câble coaxial)</p></div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
+                                <div><strong class="text-text-main text-sm">AC 12.05</strong><p class="text-text-muted text-xs mt-0.5">Communiquer avec un tiers, s'adapter à son discours et à sa langue — rédaction des comptes-rendus de manipulation</p></div>
                             </div>
                         </div>
                     </div>
@@ -731,7 +743,7 @@ def generate_map(lat, lon):
                             <div>
                                 <p class="text-text-muted text-xs mb-2 italic">Rapport de projet rendu (extrait)</p>
                                 <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
-                                    <img src="rapport_sae15.png" alt="Capture du rapport SAÉ 1.05" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <img src="sae15_rapport.png" alt="Capture du rapport SAÉ 1.05" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
@@ -775,34 +787,48 @@ def generate_map(lat, lon):
                         </div>
                     </div>
                     <div class="p-6 space-y-4 bg-white">
-                        <p class="text-text-muted text-sm">C'est le cœur du métier. J'ai appris comment fonctionne un réseau et comment le paramétrer. J'ai pu travailler sur les AC suivants :</p>
+                        <p class="text-text-muted text-sm">C'est le cœur du métier. J'ai appris comment fonctionne un réseau et comment le paramétrer.</p>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 11.02 - Comprendre l'architecture des systèmes numériques :</strong>
-                                    <p class="text-text-muted text-sm">Acquis lors des SAÉ 1.01 et 1.02 en comprenant le rôle des différents serveurs et machines.</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.01 - Maîtriser les lois fondamentales de l'électricité</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.01</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Abordé via les manipulations sur les signaux électriques dans les équipements réseau et télécoms.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 11.03 - Configurer les fonctions de base du réseau local :</strong>
-                                    <p class="text-text-muted text-sm">Validé lors de la SAÉ 1.02 où j'ai configuré les VLANs, les switchs et les routeurs Cisco.</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.02 - Comprendre l'architecture des systèmes numériques</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.01, 1.02</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Acquis en comprenant le rôle des différents équipements, protocoles et machines dans un réseau.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 11.04 - Maîtriser les systèmes d'exploitation :</strong>
-                                    <p class="text-text-muted text-sm">Travaillé lors de la SAÉ 1.01 (sur Kali Linux pour le Hacking) et la SAÉ 1.02 (installation d'un serveur Debian 13).</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.03 - Configurer les fonctions de base du réseau local</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.02</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé en configurant les VLANs, le routage inter-VLAN, RSTP et LACP sur les switchs et routeur Cisco.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 11.05 - Identifier les dysfonctionnements du réseau :</strong>
-                                    <p class="text-text-muted text-sm">Validé grâce à mes recherches de failles (SAÉ 1.01) et lors du diagnostic des pannes de notre infrastructure de groupe (SAÉ 1.02).</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.04 - Maîtriser les systèmes d'exploitation</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.01, 1.02</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Travaillé sur Kali Linux (SAÉ 1.01) et sur Debian en ligne de commande complète (SAÉ 1.02).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.05 - Identifier les dysfonctionnements du réseau local</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.01, 1.02</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé via la recherche de failles (SAÉ 1.01) et le diagnostic de pannes sur l'infrastructure de groupe (SAÉ 1.02).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 11.06 - Installer un poste client</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.02</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé avec le déploiement et la configuration de la VM Debian sous Proxmox, intégrée au réseau Fibre&Company.</p>
                                 </div>
                             </li>
                         </ul>
@@ -818,20 +844,41 @@ def generate_map(lat, lon):
                         </div>
                     </div>
                     <div class="p-6 space-y-4 bg-white">
-                        <p class="text-text-muted text-sm">Cette partie touche à l'aspect très matériel ("les câbles") de la formation.</p>
+                        <p class="text-text-muted text-sm">Cette partie touche à l'aspect très matériel de la formation — signaux, câbles, supports physiques.</p>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 12.01 - Mesurer et analyser les signaux :</strong>
-                                    <p class="text-text-muted text-sm">Totalement validé pendant la SAÉ 1.03 en utilisant un oscilloscope pour calculer le temps de parcours d'une impulsion sur un câble.</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 12.01 - Mesurer et analyser les signaux</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.03</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé avec l'oscilloscope (méthode DTF, câble cuivre) et le photomètre (atténuation fibre optique).</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 12.03 - Déployer des supports de transmission :</strong>
-                                    <p class="text-text-muted text-sm">Validé (SAÉ 1.03) grâce à nos manipulations physiques (photométrie) sur la fibre optique et sur les câbles en cuivre.</p>
+                                <i class="fa-solid fa-times-circle text-gray-300 mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 12.02 - Caractériser des systèmes de transmissions élémentaires</strong><span class="text-xs font-bold bg-gray-100 text-gray-500 border border-gray-200 px-2 py-0.5 rounded-full">Non abordé au S1</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Cet AC n'a pas été couvert par les SAÉ du semestre 1.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 12.03 - Déployer des supports de transmission</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.03</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé via les manipulations physiques sur la fibre optique et le câble coaxial en laboratoire.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-times-circle text-gray-300 mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 12.04 - Connecter les systèmes de ToIP</strong><span class="text-xs font-bold bg-gray-100 text-gray-500 border border-gray-200 px-2 py-0.5 rounded-full">Non abordé au S1</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Cet AC n'a pas été couvert par les SAÉ du semestre 1.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 12.05 - Communiquer avec un tiers et s'adapter à son interlocuteur</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.03</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Travaillé à travers la rédaction des comptes-rendus de manipulation (photométrie et DTF), présentés de façon structurée.</p>
                                 </div>
                             </li>
                         </ul>
@@ -847,34 +894,48 @@ def generate_map(lat, lon):
                         </div>
                     </div>
                     <div class="p-6 space-y-4 bg-white">
-                        <p class="text-text-muted text-sm">C'est la partie programmation et développement. Ces compétences me serviront à créer des petits logiciels pour automatiser mon futur métier.</p>
+                        <p class="text-text-muted text-sm">C'est la partie programmation et développement web.</p>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 13.01 - Utiliser un système informatique et ses outils :</strong>
-                                    <p class="text-text-muted text-sm">Validé sur tous les projets informatiques, notamment lors du codage de la SAÉ 1.04 et 1.05.</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.01 - Utiliser un système informatique et ses outils</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.04, 1.05</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé sur tous les projets de développement, notamment la gestion de GitHub, des environnements Python et des outils de validation W3C.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 13.02 - Lire, exécuter et modifier un programme :</strong>
-                                    <p class="text-text-muted text-sm">Prouvé via la SAÉ 1.05 où j'ai dû écrire et faire fonctionner un code Python fonctionnel.</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.02 - Lire, exécuter, corriger et modifier un programme</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.05</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Prouvé via la SAÉ 1.05 avec l'écriture, le débogage et la correction des scripts Python de traitement de données OSM.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 13.04 - Connaître l'architecture d'un site Web :</strong>
-                                    <p class="text-text-muted text-sm">Validé avec succès avec la SAÉ 1.04 en concevant un site de A à Z (HTML/CSS) pour le FC Barcelone.</p>
+                                <i class="fa-solid fa-times-circle text-gray-300 mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.03 - Traduire un algorithme dans un langage pour un environnement donné</strong><span class="text-xs font-bold bg-gray-100 text-gray-500 border border-gray-200 px-2 py-0.5 rounded-full">Non abordé au S1</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Cet AC n'a pas été couvert par les SAÉ du semestre 1.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3"></i>
-                                <div>
-                                    <strong class="text-text-main text-sm">AC 13.05 - Gestion de données :</strong>
-                                    <p class="text-text-muted text-sm">Compris et appliqué dans la SAÉ 1.05 en manipulant des données cartographiques (API OpenStreetMap).</p>
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.04 - Connaître l'architecture et les technologies d'un site Web</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.04</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Validé en concevant un site de A à Z (HTML5/CSS3, Flexbox, Grid, animations) avec hébergement GitHub Pages.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-brand-primary mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.05 - Choisir les mécanismes de gestion de données adaptés</strong><span class="text-xs font-bold bg-green-100 text-green-700 border border-green-200 px-2 py-0.5 rounded-full">Validé — SAÉ 1.05</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Appliqué en manipulant des données JSON via les API REST d'OpenStreetMap et Overpass, avec conversion en Markdown/HTML.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-times-circle text-gray-300 mt-1 mr-3 flex-shrink-0"></i>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 flex-wrap"><strong class="text-text-main text-sm">AC 13.06 - S'intégrer dans un environnement propice au développement collaboratif</strong><span class="text-xs font-bold bg-gray-100 text-gray-500 border border-gray-200 px-2 py-0.5 rounded-full">Non abordé au S1</span></div>
+                                    <p class="text-text-muted text-sm mt-1">Cet AC n'a pas été couvert par les SAÉ du semestre 1.</p>
                                 </div>
                             </li>
                         </ul>
@@ -936,4 +997,5 @@ def generate_map(lat, lon):
     </script>
 </body>
 </html>
+
 
