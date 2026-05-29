@@ -92,7 +92,7 @@
                     
                     <div class="mt-8 pt-8 border-t border-cream-border text-left space-y-4">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-primary w-5 text-lg"></i><span class="text-sm text-text-muted font-medium break-all">ahmedabdelmounim10@gmail.com</span></div>
-                        <div class="flex items-center gap-3"><i class="fa-brands fa-linkedin text-brand-primary w-5 text-lg"></i><span class="text-sm text-text-muted font-medium">linkedin.com/in/abdelmounim</span></div>
+
                     </div>
                     
                     <a href="mon-cv.pdf" download="CV_Abdelmounim.pdf" class="w-full mt-8 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-3 px-4 rounded-xl transition-all text-sm flex items-center justify-center gap-2">
@@ -457,18 +457,16 @@
                                 <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
                                 <div><strong class="text-text-main text-sm">AC 12.03</strong><p class="text-text-muted text-xs mt-0.5">Déployer des supports de transmission (fibre optique, câble coaxial)</p></div>
                             </div>
-                            <div class="flex items-start gap-3 bg-brand-light/10 border border-brand-light/30 rounded-xl p-4">
-                                <i class="fa-solid fa-check-circle text-brand-primary mt-0.5"></i>
-                                <div><strong class="text-text-main text-sm">AC 12.05</strong><p class="text-text-muted text-xs mt-0.5">Communiquer avec un tiers et adapter son discours (restitution orale R212)</p></div>
-                            </div>
                         </div>
                     </div>
 
                     <div class="border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Partie 1 : Mesure sur la Fibre Optique</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            Pour l'optique, nous avons réalisé une mesure de photométrie sur une bobine de fibre monomode. J'ai d'abord calculé la perte théorique de la liaison (6,58 dB), puis nous avons procédé à la mesure réelle avec un photomètre (à 1310 nm).
-                        </p>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce que j'ai fait — Partie Fibre Optique</h4>
+                        <ul class="space-y-2 text-text-muted text-sm mb-4">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Prise en main du <strong>photomètre</strong> et de la source lumineuse à 1310 nm : calibration de l'appareil (remise à zéro) avant la mesure pour ne pas biaiser le résultat.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Calcul théorique de la perte de la liaison : addition des pertes par connecteurs (0,5 dB × 2) et de l'atténuation linéique de la bobine de fibre monomode — résultat obtenu : <strong>6,58 dB</strong>.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Mesure réelle avec le photomètre sur la bobine, puis comparaison avec la valeur théorique pour valider la qualité de la liaison. Rédaction complète du compte-rendu de cette partie en autonomie.</span></li>
+                        </ul>
                         
                         <div class="mb-6">
                             <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group max-w-2xl mx-auto">
@@ -483,10 +481,12 @@
                     </div>
 
                     <div class="border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-3">4. Partie 2 : Mesure sur le Cuivre (13,86 mètres)</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            Pour le câble coaxial, l'objectif était de déterminer sa longueur exacte en mesurant le temps de parcours d'une impulsion électrique. À l'aide d'un générateur de fonctions (GBF) et d'un oscilloscope, j'ai relevé le temps de vol du signal. Sachant que l'onde se déplace à 66 % de la vitesse de la lumière dans ce câble (NVP = 0,66), le calcul m'a permis de déduire avec précision que le câble mesurait <strong>13,86 mètres</strong>.
-                        </p>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3">4. Ce que j'ai fait — Partie Cuivre</h4>
+                        <ul class="space-y-2 text-text-muted text-sm mb-4">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Connexion d'un <strong>GBF (générateur de fonctions)</strong> à une extrémité du câble coaxial et d'un <strong>oscilloscope</strong> à l'autre, pour visualiser le signal émis et son écho réfléchi.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Relevé du <strong>temps de vol</strong> de l'impulsion sur l'oscilloscope, puis application de la formule : longueur = (vitesse × temps) / 2, avec NVP = 0,66 (le signal se propage à 66 % de la vitesse de la lumière dans ce câble).</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Résultat calculé : <strong>13,86 mètres</strong>, cohérent avec la longueur physique annoncée. Comparaison de la valeur mesurée vs théorique pour valider la méthode DTF.</span></li>
+                        </ul>
                         
                         <div class="mb-6">
                             <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group max-w-2xl mx-auto">
@@ -500,22 +500,16 @@
                         </a>
                     </div>
 
-                    <!-- LIEN ORAL -->
-                    <div class="border-t border-cream-border pt-6">
-                        <h4 class="text-brand-dark font-bold text-lg mb-3">5. Trace supplémentaire — Oral R212</h4>
-                        <p class="text-text-muted text-sm mb-3">En lien avec l'AC 12.05, cette SAÉ a également donné lieu à une restitution orale dans le cadre de la ressource R212 :</p>
-                        <a href="oral_r212.pdf" download class="inline-flex items-center gap-2 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-2 px-6 rounded-lg transition-all text-sm">
-                            <i class="fa-solid fa-file-pdf"></i> Télécharger le support oral R212
-                        </a>
-                    </div>
-
                     <div class="bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl mt-8">
-                        <h4 class="text-brand-dark font-bold text-lg mb-2"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
+                        <h4 class="text-brand-dark font-bold text-lg mb-3"><i class="fa-solid fa-brain mr-2"></i>Autoévaluation</h4>
                         <p class="text-text-muted leading-relaxed mb-3">
-                            <strong>Les difficultés :</strong> Notre groupe n'a eu que 30 minutes d'explications sur la fibre optique au lieu des 2 heures prévues. Il a donc fallu comprendre très vite comment calibrer les appareils (faire le "zéro") pour ne pas fausser les mesures.
+                            <strong>Les difficultés :</strong> Notre groupe n'a eu que 30 minutes d'explications sur la fibre au lieu des 2 heures prévues. Il a fallu comprendre rapidement comment calibrer le photomètre (faire le zéro avec les cordons de référence) sans quoi toutes les mesures auraient été faussées.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-3">
+                            <strong>Ce que j'aurais fait autrement :</strong> Prévoir plus de temps sur la partie cuivre pour tester plusieurs longueurs de câble et consolider la compréhension de la méthode DTF, pas seulement valider une mesure.
                         </p>
                         <p class="text-text-muted leading-relaxed">
-                            <strong>Ce que j'ai retenu :</strong> J'ai compensé ce manque de temps en faisant mes propres recherches de manière autonome. Ce projet m'a permis de valider la compétence <strong>RT2</strong>, et surtout l'<strong>AC 12.01</strong> (Mesurer et analyser les signaux physiques) en sachant manipuler correctement un oscilloscope et un photomètre.
+                            <strong>Ce que j'en tire :</strong> J'ai dû chercher par moi-même comment fonctionnait la calibration du photomètre, et ça a fini par payer. J'ai appris à manipuler un oscilloscope et un photomètre, à appliquer une formule physique sur des données réelles, et surtout à ne pas paniquer quand les conditions de TP ne sont pas idéales.
                         </p>
                     </div>
 
@@ -562,22 +556,14 @@
                     <!-- TACHES -->
                     <div class="border-t border-cream-border pt-6">
                         <h4 class="text-brand-dark font-bold text-lg mb-3">3. Ce que j'ai fait concrètement</h4>
-                        <p class="text-text-muted leading-relaxed mb-4">Le site est composé de trois pages principales :</p>
-                        <div class="space-y-3">
-                            <div class="border-l-4 border-brand-primary pl-4 py-1">
-                                <h5 class="text-text-main font-bold text-sm mb-1">Accueil <span class="font-normal text-text-muted">(index.html)</span></h5>
-                                <p class="text-text-muted text-sm">Présentation de l'effectif 2025, mise en avant de Lamine Yamal, palmarès du club. J'ai ajouté une <strong>animation CSS de chargement</strong> (loader) au démarrage de la page.</p>
-                            </div>
-                            <div class="border-l-4 border-brand-primary pl-4 py-1">
-                                <h5 class="text-text-main font-bold text-sm mb-1">Calendrier <span class="font-normal text-text-muted">(calendrier.html)</span></h5>
-                                <p class="text-text-muted text-sm">Affichage des matchs avec mise en page en <strong>CSS Grid</strong>, classement de La Liga et forme récente de l'équipe. Le contenu est statique — je ne savais pas encore connecter une API pour qu'il se mette à jour automatiquement, c'est quelque chose que je voudrais apprendre.</p>
-                            </div>
-                            <div class="border-l-4 border-brand-primary pl-4 py-1">
-                                <h5 class="text-text-main font-bold text-sm mb-1">À propos <span class="font-normal text-text-muted">(apropos.html)</span></h5>
-                                <p class="text-text-muted text-sm">Contexte du projet, explication du choix du thème, présentation de l'auteur.</p>
-                            </div>
-                        </div>
-                        <p class="text-text-muted leading-relaxed mt-4 text-sm">Sur le plan technique : <strong>Flexbox</strong> pour la structure globale et le menu, <strong>CSS Grid</strong> pour le calendrier, <strong>Media Queries</strong> pour le responsive (les colonnes s'empilent sur mobile), et animations CSS sur le loader et les survols du menu.</p>
+                        <ul class="space-y-2 text-text-muted text-sm">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Création de la structure HTML5 sémantique des 3 pages (<code class="bg-cream-bg px-1 rounded">index.html</code>, <code class="bg-cream-bg px-1 rounded">calendrier.html</code>, <code class="bg-cream-bg px-1 rounded">apropos.html</code>) avec les balises <code class="bg-cream-bg px-1 rounded">header</code>, <code class="bg-cream-bg px-1 rounded">main</code>, <code class="bg-cream-bg px-1 rounded">section</code>, <code class="bg-cream-bg px-1 rounded">aside</code>, <code class="bg-cream-bg px-1 rounded">footer</code>.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Mise en page avec <strong>Flexbox</strong> pour la navbar et la structure globale, et <strong>CSS Grid</strong> (<code class="bg-cream-bg px-1 rounded">grid-template-columns: 1fr 1fr</code>) pour aligner les matchs du calendrier.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Responsive design via <strong>Media Queries</strong> : sur mobile, les colonnes du calendrier et de l'effectif s'empilent en colonne unique pour rester lisibles.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Deux <strong>animations CSS</strong> : un loader au démarrage de la page d'accueil (keyframe opacity + scale), et des effets de survol sur les liens du menu en haut à gauche.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Validation du code HTML avec le <strong>validateur W3C</strong> (zéro erreur) et vérification de la conformité <strong>WCAG 2.0 AA</strong> : attributs <code class="bg-cream-bg px-1 rounded">alt</code> sur toutes les images, ratio de contraste couleur suffisant, navigation au clavier fonctionnelle.</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-chevron-right text-brand-primary mt-1 text-xs"></i><span>Versionnement du code sur <strong>GitHub</strong> avec des commits porteurs de sens, et déploiement du site via <strong>GitHub Pages</strong> pour un hébergement public.</span></li>
+                        </ul>
                     </div>
 
                     <!-- LIEN + EXTRAITS CODE -->
@@ -597,9 +583,35 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="text-text-muted text-xs mb-2 italic">CSS — Mise en page Grid et styles des matchs</p>
-                                <div class="rounded-xl overflow-hidden border border-cream-border shadow-md group">
-                                    <img src="sae14_css.png" alt="Extrait CSS du calendrier SAÉ 1.04" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                                <p class="text-text-muted text-xs mb-2 italic">Extrait du README.md — Documentation du projet</p>
+                                <div class="bg-gray-900 rounded-xl p-4 border border-cream-border shadow-inner overflow-x-auto">
+                                    <pre class="text-xs text-green-300 leading-relaxed whitespace-pre-wrap"><code># Site Web - FC Barcelona
+
+Réalisé dans le cadre de la SAE 14.
+Objectif : site web complet et responsive.
+
+## Accès au site
+Hébergé via GitHub Pages.
+https://ahmed2720.github.io/sae/
+
+## Pages
+1. Accueil (index.html)
+   Effectif 2025, Lamine Yamal,
+   palmarès + animation loader CSS.
+2. Calendrier (calendrier.html)
+   Matchs en CSS Grid, classement
+   La Liga, forme de l'équipe.
+3. À Propos (apropos.html)
+   Contexte du projet.
+
+## Technologies
+- HTML5 sémantique
+- CSS3 : Flexbox, Grid, Media Queries
+- Animations CSS (loader + survols)
+
+## Qualité
+- Validation W3C : 0 erreur
+- Conformité WCAG 2.0 AA</code></pre>
                                 </div>
                             </div>
                         </div>
