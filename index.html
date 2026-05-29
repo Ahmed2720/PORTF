@@ -61,22 +61,45 @@
         <div id="page-accueil" class="page-view min-h-[calc(100vh-5rem)] flex items-center justify-center px-4">
             <div class="max-w-5xl mx-auto w-full py-16">
 
-                <!-- Haut : badge + titre + description -->
-                <div class="text-center mb-12">
+                <!-- Haut : badge -->
+                <div class="text-center mb-10">
                     <span class="bg-brand-light/50 text-brand-dark border border-brand-primary/20 text-xs uppercase tracking-widest px-4 py-1.5 rounded-full font-bold shadow-sm">Portfolio Universitaire — IUT Grand Ouest Normandie</span>
-                    <h1 class="text-5xl md:text-7xl font-bold text-text-main mt-6 mb-4 tracking-tight leading-tight">
-                        Abdelmounim <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-dark">Ahmed</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl text-brand-primary font-semibold mb-6 tracking-wide">
-                        Étudiant en BUT Réseaux & Télécommunications
-                    </p>
-                    <p class="text-base md:text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
-                        Bienvenue sur mon portfolio. Ce site retrace mon évolution, mes projets SAÉ et les compétences acquises lors de ma première année de formation.
-                    </p>
+                </div>
+
+                <!-- Layout : photo gauche + texte droite -->
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-12">
+
+                    <!-- Photo -->
+                    <div class="flex-shrink-0">
+                        <div class="w-64 h-80 bg-cream-bg rounded-2xl overflow-hidden shadow-xl border border-cream-border">
+                            <img src="chemin-vers-ta-photo.jpg" alt="Abdelmounim Ahmed" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center\'><i class=\'fa-solid fa-user-tie text-8xl text-brand-primary\'></i></div>'">
+                        </div>
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl font-bold text-text-main mb-3 tracking-tight leading-tight">
+                            Abdelmounim <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-dark">Ahmed</span>
+                        </h1>
+                        <p class="text-xl text-brand-primary font-semibold mb-4 tracking-wide">
+                            Étudiant en BUT Réseaux & Télécommunications
+                        </p>
+                        <p class="text-base text-text-muted leading-relaxed mb-6 max-w-xl">
+                            J'ai 19 ans et j'étudie à l'IUT Grand Ouest Normandie (Ifs). Ce portfolio retrace mon évolution, mes projets SAÉ et les compétences acquises lors de ma première année. Mon objectif : intégrer une école d'ingénieurs spécialisée dans les réseaux ou les télécoms.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                            <button onclick="navigateTo('page-sae-liste')" class="w-full sm:w-auto bg-brand-primary hover:bg-brand-dark text-white font-bold py-3 px-7 rounded-xl transition-all shadow-lg shadow-brand-primary/30 hover:-translate-y-0.5">
+                                Explorer mes SAÉ <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                            <button onclick="navigateTo('page-profil')" class="w-full sm:w-auto bg-white border border-cream-border hover:border-brand-primary text-text-main font-medium py-3 px-7 rounded-xl transition-all shadow-sm">
+                                Mon profil & CV
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Stats -->
-                <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-12">
+                <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto">
                     <div class="bg-white border border-cream-border rounded-2xl p-4 text-center shadow-sm">
                         <p class="text-3xl font-bold text-brand-primary">5</p>
                         <p class="text-xs text-text-muted mt-1 font-medium">SAÉ réalisées</p>
@@ -91,92 +114,69 @@
                     </div>
                 </div>
 
-                <!-- Boutons -->
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
-                    <button onclick="navigateTo('page-sae-liste')" class="w-full sm:w-auto bg-brand-primary hover:bg-brand-dark text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-brand-primary/30 hover:-translate-y-0.5">
-                        Explorer mes SAÉ <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-                    <button onclick="navigateTo('page-profil')" class="w-full sm:w-auto bg-white border border-cream-border hover:border-brand-primary text-text-main font-medium py-4 px-8 rounded-xl transition-all shadow-sm">
-                        En savoir plus sur mon profil
-                    </button>
-                </div>
-
             </div>
         </div>
 
-        <div id="page-profil" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-8">
-                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 text-center h-fit shadow-sm">
-                    
-                    <div class="w-36 h-36 bg-cream-bg rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-brand-light overflow-hidden shadow-inner">
-                        <img src="chemin-vers-ta-photo.jpg" alt="Abdelmounim Ahmed" class="w-full h-full object-cover" onerror="this.outerHTML='<i class=\'fa-solid fa-user-tie text-5xl text-brand-primary\'></i>'">
-                    </div>
-                    
-                    <h2 class="text-2xl font-bold text-text-main">Abdelmounim Ahmed</h2>
-                    <p class="text-brand-primary text-sm font-bold mt-1 uppercase tracking-wide">Étudiant en BUT R&T (1A)</p>
-                    <p class="text-text-muted text-xs mt-2"><i class="fa-solid fa-location-dot mr-1 text-brand-primary"></i> IUT Grand Ouest Normandie, Ifs</p>
-                    
-                    <div class="mt-8 pt-8 border-t border-cream-border text-left space-y-4">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-primary w-5 text-lg"></i><span class="text-sm text-text-muted font-medium break-all">ahmedabdelmounim10@gmail.com</span></div>
+        <div id="page-profil" class="page-view hidden min-h-[calc(100vh-5rem)] px-4 py-12 max-w-5xl mx-auto sm:px-6 lg:px-8">
+            <div class="mt-8 space-y-8">
 
+                <!-- En-tête : identité + CV -->
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm flex flex-col sm:flex-row items-center gap-8">
+                    <div class="w-28 h-28 bg-cream-bg rounded-full flex-shrink-0 flex items-center justify-center border-4 border-brand-light overflow-hidden shadow-inner">
+                        <img src="chemin-vers-ta-photo.jpg" alt="Abdelmounim Ahmed" class="w-full h-full object-cover" onerror="this.outerHTML='<i class=\'fa-solid fa-user-tie text-4xl text-brand-primary\'></i>'">
                     </div>
-                    
-                    <a href="mon-cv.pdf" download="CV_Abdelmounim.pdf" class="w-full mt-8 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-3 px-4 rounded-xl transition-all text-sm flex items-center justify-center gap-2">
+                    <div class="flex-1 text-center sm:text-left">
+                        <h2 class="text-2xl font-bold text-text-main">Abdelmounim Ahmed</h2>
+                        <p class="text-brand-primary text-sm font-bold mt-1 uppercase tracking-wide">Étudiant en BUT R&T — 1ère année</p>
+                        <p class="text-text-muted text-sm mt-1"><i class="fa-solid fa-location-dot mr-1 text-brand-primary"></i> IUT Grand Ouest Normandie, Ifs</p>
+                        <p class="text-text-muted text-sm mt-1"><i class="fa-solid fa-envelope mr-1 text-brand-primary"></i> ahmedabdelmounim10@gmail.com</p>
+                    </div>
+                    <a href="mon-cv.pdf" download="CV_Abdelmounim.pdf" class="flex-shrink-0 bg-brand-light/30 border border-brand-light hover:bg-brand-primary hover:text-white text-brand-dark font-semibold py-3 px-6 rounded-xl transition-all text-sm flex items-center gap-2">
                         <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV
                     </a>
                 </div>
 
-                <div class="lg:col-span-2 space-y-8">
-                    <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm">
-                        <h3 class="text-2xl font-bold text-text-main mb-4">Présentation Générale</h3>
-                        <p class="text-text-muted leading-relaxed mb-4">
-                            J'ai 19 ans et j'étudie actuellement en BUT Réseaux et Télécommunications. J'ai choisi cette filière car le fonctionnement des infrastructures réseaux et la manière dont les données circulent m'intéressent beaucoup. Cette première année a été l'occasion d'acquérir de bonnes bases pratiques via les Situations d'Apprentissage et d'Évaluation (SAÉ).
-                        </p>
-                        <p class="text-text-muted leading-relaxed">
-                            Ce qui me plaît dans ce domaine, c'est la logique et la rigueur que ça demande. À côté de ça, j'ai aussi une expérience professionnelle dans la vente. Cela m'a appris à écouter, à être responsable et à m'adapter facilement aux gens et aux imprévus, des qualités utiles pour travailler en équipe sur des projets techniques.
-                        </p>
+                <!-- Compétences -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-server mr-2"></i>Savoirs Techniques</h4>
+                        <ul class="space-y-3 text-sm text-text-muted">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Modèle OSI et protocoles TCP/IP</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Câblage et adressage IP</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bases en Python</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bases en Web (HTML/CSS)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Anglais technique lié aux réseaux</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Mesures sur supports de transmission (fibre optique, câble coaxial)</li>
+                        </ul>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
-                            <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-server mr-2"></i>Savoirs Techniques</h4>
-                            <ul class="space-y-3 text-sm text-text-muted">
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Modèle OSI et protocoles TCP/IP</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Câblage et adressage IP</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bases en Python</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bases en Web (HTML/CSS)</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Anglais technique lié aux réseaux</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Mesures sur supports de transmission (fibre optique, câble coaxial)</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
-                            <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-users mr-2"></i>Savoir-être</h4>
-                            <ul class="space-y-3 text-sm text-text-muted">
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Travail en équipe</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Curiosité technique</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Rigueur et ponctualité</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bon relationnel</li>
-                                <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Capacité d'adaptation</li>
-                            </ul>
-                        </div>
+                    <div class="bg-brand-light/10 border border-brand-light/40 rounded-2xl p-6 shadow-sm">
+                        <h4 class="text-brand-dark font-bold text-lg mb-4"><i class="fa-solid fa-users mr-2"></i>Savoir-être</h4>
+                        <ul class="space-y-3 text-sm text-text-muted">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Travail en équipe</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Curiosité technique</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Rigueur et ponctualité</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Bon relationnel</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-primary mr-3"></i> Capacité d'adaptation</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm">
-                        <h3 class="text-2xl font-bold text-text-main mb-4">Mon Projet Professionnel</h3>
-                        <div class="flex items-start gap-5 bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
-                            <div class="bg-white p-3 rounded-full shadow-sm">
-                                <i class="fa-solid fa-graduation-cap text-2xl text-brand-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-text-main font-bold text-lg">Intégrer une école d'ingénieurs</h4>
-                                <p class="text-text-muted text-sm mt-2 leading-relaxed">
-                                    Après mon BUT, mon objectif est d'intégrer une école d'ingénieurs spécialisée dans les réseaux ou les télécoms. J'aimerais vraiment mettre en pratique ce que j'apprends à l'IUT sur le terrain. Mon but est de développer de solides compétences techniques pour pouvoir, à terme, gérer de vrais projets d'infrastructures.
-                                </p>
-                            </div>
+                <!-- Projet pro -->
+                <div class="bg-cream-card border border-cream-border rounded-2xl p-8 shadow-sm">
+                    <h3 class="text-2xl font-bold text-text-main mb-4">Mon Projet Professionnel</h3>
+                    <div class="flex items-start gap-5 bg-brand-light/20 border border-brand-light/50 p-6 rounded-xl">
+                        <div class="bg-white p-3 rounded-full shadow-sm">
+                            <i class="fa-solid fa-graduation-cap text-2xl text-brand-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-text-main font-bold text-lg">Intégrer une école d'ingénieurs</h4>
+                            <p class="text-text-muted text-sm mt-2 leading-relaxed">
+                                Après mon BUT, mon objectif est d'intégrer une école d'ingénieurs spécialisée dans les réseaux ou les télécoms. J'aimerais vraiment mettre en pratique ce que j'apprends à l'IUT sur le terrain. Mon but est de développer de solides compétences techniques pour pouvoir, à terme, gérer de vrais projets d'infrastructures.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
